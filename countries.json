@@ -67,6 +67,16 @@
                     "name": "Kardamomový čaj",
                     "desc": "Zelený čaj vařený s drceným kardamomem a cukrem.",
                     "type": "nealko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Čerstvý čaj s hromadou cukru.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hosté sedí na polštářích na zemi kolem ubrusu (dastarkhan). Chléb (naan) se nikdy nesmí vyhodit."
@@ -134,6 +144,16 @@
                 {
                     "name": "Raki Rrushi",
                     "desc": "Silná pálenka z hroznů, podávaná k meze.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Gin & Tonic (Evropský styl)",
+                    "desc": "Prémiový gin, řemeslný tonic, rozmarýn a jalovec.",
                     "type": "alko"
                 },
                 {
@@ -205,13 +225,23 @@
             "alcohol": "Víno (Medea), Mátový čaj, Káva",
             "drinks": [
                 {
-                    "name": "Etshay",
-                    "desc": "Tradiční mátový čaj s piniovými oříšky.",
-                    "type": "nealko"
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
                 },
                 {
-                    "name": "Mazagran",
-                    "desc": "Studená káva s citronem a ledem.",
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Chapman",
+                    "desc": "Rum/Gin, Angostura bitters, Fanta, Sprite a okurka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Etshay",
+                    "desc": "Tradiční mátový čaj s piniovými oříšky.",
                     "type": "nealko"
                 }
             ],
@@ -271,7 +301,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
         }
     },
@@ -416,6 +467,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Gin & Tonic (Evropský styl)",
+                    "desc": "Prémiový gin, řemeslný tonic, rozmarýn a jalovec.",
+                    "type": "alko"
+                },
+                {
                     "name": "Horká čokoláda",
                     "desc": "Hustá čokoláda podávaná po lyžování.",
                     "type": "nealko"
@@ -485,6 +546,16 @@
                 {
                     "name": "Cuca Beer",
                     "desc": "Nejpopulárnější angolské pivo, ležák.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
                     "type": "alko"
                 },
                 {
@@ -636,6 +707,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Margarita",
+                    "desc": "Tequila, Cointreau, limetková šťáva, sůl na okraji.",
+                    "type": "alko"
+                },
+                {
                     "name": "Ting",
                     "desc": "Perlivá grapefruitová limonáda.",
                     "type": "nealko"
@@ -703,13 +784,23 @@
             "alcohol": "Karak čaj, Káva, Mocktaily",
             "drinks": [
                 {
-                    "name": "Karak čaj",
-                    "desc": "Typický nápoj pro tento region (Karak čaj).",
-                    "type": "nealko"
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
                 },
                 {
-                    "name": "Káva",
-                    "desc": "Typický nápoj pro tento region (Káva).",
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Karak čaj",
+                    "desc": "Typický nápoj pro tento region (Karak čaj).",
                     "type": "nealko"
                 }
             ],
@@ -778,6 +869,16 @@
                 {
                     "name": "Fernet con Coca",
                     "desc": "Národní drink - Fernet Branca s Coca-Colou (poměr 30:70).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Margarita",
+                    "desc": "Tequila, Cointreau, limetková šťáva, sůl na okraji.",
                     "type": "alko"
                 },
                 {
@@ -852,6 +953,16 @@
                 {
                     "name": "Arménský koňak",
                     "desc": "Světoznámá brandy, pijte čistou při pokojové teplotě.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
                     "type": "alko"
                 },
                 {
@@ -1003,14 +1114,24 @@
             ],
             "drinks": [
                 {
-                    "name": "Lemon, Lime & Bitters",
-                    "desc": "Limonáda s kapkou Angostura bitters (nealko klasika).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Espresso Martini",
                     "desc": "Hodně populární v Austrálii - vodka, kávový likér, espresso.",
                     "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon, Lime & Bitters",
+                    "desc": "Limonáda s kapkou Angostura bitters (nealko klasika).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Barbie (BBQ) na pláži nebo v parku. 'Bring your own' (BYO) – do restaurace si často můžete přinést vlastní víno.",
@@ -1087,6 +1208,16 @@
                     "name": "Sky Juice",
                     "desc": "Směs kokosové vody, kondenzovaného mléka a ginu (nebo bez).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Conch (mušle) se jí syrová, smažená i v polévce. Fish Fry je páteční společenská akce."
@@ -1150,13 +1281,23 @@
             "alcohol": "Arak (v hotelech), Káva s kardamomem",
             "drinks": [
                 {
-                    "name": "Gahwa",
-                    "desc": "Arabská káva s kardamomem a datlemi.",
-                    "type": "nealko"
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
                 },
                 {
-                    "name": "Laban",
-                    "desc": "Slaný jogurtový drink na osvěžení.",
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Gahwa",
+                    "desc": "Arabská káva s kardamomem a datlemi.",
                     "type": "nealko"
                 }
             ],
@@ -1221,14 +1362,24 @@
             "alcohol": "Čaj (Chai), Šťáva z cukrové třtiny, Lassi",
             "drinks": [
                 {
-                    "name": "Čaj (Chai)",
-                    "desc": "Typický nápoj pro tento region (Čaj (Chai)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Šťáva z cukrové třtiny",
                     "desc": "Typický nápoj pro tento region (Šťáva z cukrové třtiny).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj (Chai)",
+                    "desc": "Typický nápoj pro tento region (Čaj (Chai)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Ryba a rýže dělají Bengálce. Jí se pravou rukou, jídlo se míchá s rýží přímo na talíři."
@@ -1301,6 +1452,16 @@
                     "name": "Pivo Banks",
                     "desc": "Typický nápoj pro tento region (Pivo Banks).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Flying fish a Cou-cou je národní jídlo. Páteční večer patří Oistins Fish Fry – trhu s jídlem."
@@ -1376,6 +1537,16 @@
                     "name": "Lambic)",
                     "desc": "Typický nápoj pro tento region (Lambic)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hranolky se jedí s majonézou, ne s kečupem. Pivo se podává ve specifické sklenici pro každou značku.",
@@ -1450,6 +1621,16 @@
                     "name": "Pivo Belikin",
                     "desc": "Typický nápoj pro tento region (Pivo Belikin).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Mořské plody jsou základ (humr, krevety). Marie Sharp’s (pálivá omáčka) nechybí na žádném stole."
@@ -1521,6 +1702,16 @@
                     "name": "Pivo La Béninoise",
                     "desc": "Typický nápoj pro tento region (Pivo La Béninoise).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -1677,6 +1868,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
                     "name": "Máslový čaj (Suja)",
                     "desc": "Typický nápoj pro tento region (Máslový čaj (Suja)).",
                     "type": "nealko"
@@ -1754,6 +1955,16 @@
                     "name": "Chicha (kukuřičné pivo)",
                     "desc": "Typický nápoj pro tento region (Chicha (kukuřičné pivo)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Během jídla se na stůl dává 'llajwa' (pálivá omáčka). Salteñas (taštičky) se jedí zásadně dopoledne."
@@ -1823,6 +2034,16 @@
                 {
                     "name": "Rakija (šljivovica)",
                     "desc": "Typický nápoj pro tento region (Rakija (šljivovica)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Gin & Tonic (Evropský styl)",
+                    "desc": "Prémiový gin, řemeslný tonic, rozmarýn a jalovec.",
                     "type": "alko"
                 },
                 {
@@ -1901,6 +2122,16 @@
                     "name": "Palmové víno",
                     "desc": "Typický nápoj pro tento region (Palmové víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Grilování masa je vášeň. Jídlo je směsí domorodých a evropských vlivů."
@@ -1975,6 +2206,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Rodizio – v restauracích (churrascaria) číšníci nosí maso na jehlách přímo ke stolu, dokud neřeknete stop.",
@@ -2112,23 +2353,23 @@
             "alcohol": "Palmové víno, Zázvor, Ibišek",
             "drinks": [
                 {
-                    "name": "Palm Wine",
-                    "desc": "Přírodně fermentovaná míza z palem.",
+                    "name": "Gin & Tonic (Navy Strength)",
+                    "desc": "Silný gin, kvalitní tonic a plátek citronu (tradiční námořnický).",
                     "type": "alko"
                 },
                 {
-                    "name": "Guinness Foreign Extra",
-                    "desc": "Silné tmavé pivo (velmi populární).",
+                    "name": "Pimm's Cup",
+                    "desc": "Pimm's No. 1, limonáda, okurka, jahody, máta - britská klasika v tropech.",
                     "type": "alko"
                 },
                 {
-                    "name": "Gin & Juice",
-                    "desc": "Gin s čerstvým grepovým džusem.",
+                    "name": "Dark 'n' Stormy",
+                    "desc": "Tmavý rum a zázvorové pivo (oblíbené na základnách).",
                     "type": "alko"
                 },
                 {
-                    "name": "Bissap",
-                    "desc": "Sladký červený nápoj z květů ibišku.",
+                    "name": "Iced Earl Grey",
+                    "desc": "Černý čaj s bergamotem na ledu s citronem.",
                     "type": "nealko"
                 }
             ],
@@ -2197,13 +2438,23 @@
             "alcohol": "Čaj Tarik, Kokosové mléko (Žádný alkohol - suchý stát)",
             "drinks": [
                 {
-                    "name": "Čaj Tarik",
-                    "desc": "Typický nápoj pro tento region (Čaj Tarik).",
-                    "type": "nealko"
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
                 },
                 {
-                    "name": "Kokosové mléko (Žádný alkohol - suchý stát)",
-                    "desc": "Typický nápoj pro tento region (Kokosové mléko (Žádný alkohol - suchý stát)).",
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj Tarik",
+                    "desc": "Typický nápoj pro tento region (Čaj Tarik).",
                     "type": "nealko"
                 }
             ],
@@ -2279,6 +2530,16 @@
                     "name": "Víno (Mavrud)",
                     "desc": "Typický nápoj pro tento region (Víno (Mavrud)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Balkánská pohostinnost. Maso na grilu, zelenina a sýr. Porce jsou obrovské."
@@ -2344,6 +2605,16 @@
                 {
                     "name": "Dolo (prosové pivo)",
                     "desc": "Typický nápoj pro tento region (Dolo (prosové pivo)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
                     "type": "alko"
                 },
                 {
@@ -2422,6 +2693,16 @@
                     "name": "Urwarwa (banánové pivo)",
                     "desc": "Typický nápoj pro tento region (Urwarwa (banánové pivo)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Základem je kukuřičná kaše. Maso je sváteční. Jídlo se sdílí s rodinou."
@@ -2496,6 +2777,16 @@
                     "name": "Krambambula (medový likér)",
                     "desc": "Typický nápoj pro tento region (Krambambula (medový likér)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pohostinnost je klíčová. Stoly se prohýbají jídlem, často se připíjí vodkou nebo pálenkou."
@@ -2568,6 +2859,16 @@
                     "name": "Víno (Carmenere)",
                     "desc": "Typický nápoj pro tento region (Víno (Carmenere)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Once – odpolední svačina/večeře (kolem 19:00), často jen toast s avokádem a čaj.",
@@ -2643,6 +2944,16 @@
                     "name": "Víno (Plavac)",
                     "desc": "Typický nápoj pro tento region (Víno (Plavac)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Balkánská pohostinnost. Maso na grilu, zelenina a sýr. Porce jsou obrovské."
@@ -2705,7 +3016,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
         }
     },
@@ -2860,6 +3192,16 @@
                     "name": "Palmové víno (Malafu)",
                     "desc": "Typický nápoj pro tento region (Palmové víno (Malafu)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Moambe (kuře v palmové omáčce) je sváteční jídlo. Často se jí rukama fufu."
@@ -2931,6 +3273,16 @@
                     "name": "Kubuli pivo",
                     "desc": "Typický nápoj pro tento region (Kubuli pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Kreolská kuchyně plná koření, ryb a ovoce. Jídlo je často pálivé a smažené."
@@ -3006,6 +3358,16 @@
                     "name": "Mamajuana (bylinný likér)",
                     "desc": "Typický nápoj pro tento region (Mamajuana (bylinný likér)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ]
         }
@@ -3079,6 +3441,16 @@
                     "name": "Akvavit",
                     "desc": "Typický nápoj pro tento region (Akvavit).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hygge – útulná atmosféra u jídla se svíčkami. Smørrebrød (otevřený sendvič) se jí příborem."
@@ -3143,13 +3515,23 @@
             "alcohol": "Čaj, Džusy, Pivo (vzácně)",
             "drinks": [
                 {
-                    "name": "Čaj",
-                    "desc": "Typický nápoj pro tento region (Čaj).",
-                    "type": "nealko"
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
                 },
                 {
-                    "name": "Džusy",
-                    "desc": "Typický nápoj pro tento region (Džusy).",
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Chapman",
+                    "desc": "Rum/Gin, Angostura bitters, Fanta, Sprite a okurka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj",
+                    "desc": "Typický nápoj pro tento region (Čaj).",
                     "type": "nealko"
                 }
             ],
@@ -3216,14 +3598,24 @@
             ],
             "drinks": [
                 {
-                    "name": "Čaj (Karkade)",
-                    "desc": "Typický nápoj pro tento region (Čaj (Karkade)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Pivo (Stella)",
                     "desc": "Typický nápoj pro tento region (Pivo (Stella)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj (Karkade)",
+                    "desc": "Typický nápoj pro tento region (Čaj (Karkade)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Při jídle v rodině se muži a ženy někdy stravují odděleně. Nikdy nedojídejte úplně vše, značí to, že máte stále hlad.",
@@ -3296,6 +3688,16 @@
                     "name": "Chicha",
                     "desc": "Typický nápoj pro tento region (Chicha).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Polévka je základ každého oběda. Na horách se jí morče (cuy), na pobřeží ceviche s kukuřicí."
@@ -3361,14 +3763,24 @@
             "alcohol": "Káva (Bun), Pivo Asmara, Medovina (Mies)",
             "drinks": [
                 {
-                    "name": "Káva (Bun)",
-                    "desc": "Typický nápoj pro tento region (Káva (Bun)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Pivo Asmara",
                     "desc": "Typický nápoj pro tento region (Pivo Asmara).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Káva (Bun)",
+                    "desc": "Typický nápoj pro tento region (Káva (Bun)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Základem je kukuřičná kaše. Maso je sváteční. Jídlo se sdílí s rodinou."
@@ -3442,6 +3854,16 @@
                     "name": "Vodka",
                     "desc": "Typický nápoj pro tento region (Vodka).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jednoduché, syté jídlo. Káva je nezbytností. Ryby a chléb jsou základ."
@@ -3509,6 +3931,16 @@
                 {
                     "name": "Tej (medové víno)",
                     "desc": "Typický nápoj pro tento region (Tej (medové víno)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
                     "type": "alko"
                 },
                 {
@@ -3747,6 +4179,16 @@
                     "name": "Pivo Fiji Bitter",
                     "desc": "Typický nápoj pro tento region (Pivo Fiji Bitter).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se peče v zemních pecích. Základem je taro, yam a kokos. Vepřové je slavnostní."
@@ -3821,6 +4263,16 @@
                     "name": "Rum Tanduay",
                     "desc": "Typický nápoj pro tento region (Rum Tanduay).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Kamayan – tradiční hostina, kde se jídlo servíruje na banánových listech a jí se rukama."
@@ -3896,6 +4348,16 @@
                     "name": "Likér Lakka",
                     "desc": "Typický nápoj pro tento region (Likér Lakka).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Káva se pije ve velkém množství. Po sauně je tradicí opékání klobás (makkara) na ohni."
@@ -3971,6 +4433,16 @@
                     "name": "Šampaňské",
                     "desc": "Typický nápoj pro tento region (Šampaňské).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo je rituál o několika chodech. Důležitý je sýr po hlavním jídle a víno. Oběd může trvat i dvě hodiny.",
@@ -4106,7 +4578,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
         }
     },
@@ -4176,6 +4669,16 @@
                     "name": "Palmové víno",
                     "desc": "Typický nápoj pro tento region (Palmové víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Místní kuchyně odráží kulturní dědictví a dostupné suroviny. Jídlo je příležitostí k setkání."
@@ -4241,6 +4744,16 @@
                 {
                     "name": "Palmové víno",
                     "desc": "Typický nápoj pro tento region (Palmové víno).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
                     "type": "alko"
                 },
                 {
@@ -4319,6 +4832,16 @@
                     "name": "Pivo Star",
                     "desc": "Typický nápoj pro tento region (Pivo Star).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jollof Rice je předmětem národní hrdosti (a sporů s Nigérií). Jí se často z jedné mísy."
@@ -4464,6 +4987,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Margarita",
+                    "desc": "Tequila, Cointreau, limetková šťáva, sůl na okraji.",
+                    "type": "alko"
+                },
+                {
                     "name": "Muškátový sirup",
                     "desc": "Typický nápoj pro tento region (Muškátový sirup).",
                     "type": "nealko"
@@ -4539,6 +5072,16 @@
                     "name": "Chacha (pálenka)",
                     "desc": "Typický nápoj pro tento region (Chacha (pálenka)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Supra – tradiční hostina vedená tamadou, který pronáší dlouhé přípitky. Stůl se prohýbá pod jídlem."
@@ -4752,7 +5295,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Ryby a kokos na sto způsobů. Jídlo je dar, který se má sdílet."
         }
     },
@@ -4822,6 +5386,16 @@
                     "name": "Pivo Gallo",
                     "desc": "Typický nápoj pro tento region (Pivo Gallo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Tortilly se dělají ručně a čerstvé ke každému jídlu. Káva je jedna z nejlepších na světě."
@@ -4976,6 +5550,16 @@
                     "name": "Zázvorové pivo",
                     "desc": "Typický nápoj pro tento region (Zázvorové pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -5048,6 +5632,16 @@
                     "name": "Palmové víno",
                     "desc": "Typický nápoj pro tento region (Palmové víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -5119,6 +5713,16 @@
                     "name": "Pivo Banks",
                     "desc": "Typický nápoj pro tento region (Pivo Banks).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Maso hraje velkou roli. Pozdní večeře. Oběd je důležitější než večeře v mnoha zemích."
@@ -5192,6 +5796,16 @@
                     "name": "Pivo Prestige",
                     "desc": "Typický nápoj pro tento region (Pivo Prestige).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo je silně kořeněné. Polévka Joumou se jí tradičně 1. ledna na oslavu nezávislosti."
@@ -5263,6 +5877,16 @@
                     "name": "Guaro",
                     "desc": "Typický nápoj pro tento region (Guaro).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Baleada – velká tortilla s fazolemi a smetanou. Jí se na ulici jako rychlé jídlo."
@@ -5326,7 +5950,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Dim Sum – 'dotknout se srdce'. Čajovny jsou plné lidí s novinami a košíčky s knedlíčky."
         }
     },
@@ -5392,13 +6037,23 @@
             ],
             "drinks": [
                 {
-                    "name": "Čaj (Masala Chai)",
-                    "desc": "Typický nápoj pro tento region (Čaj (Masala Chai)).",
-                    "type": "nealko"
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
                 },
                 {
-                    "name": "Lassi",
-                    "desc": "Typický nápoj pro tento region (Lassi).",
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj (Masala Chai)",
+                    "desc": "Typický nápoj pro tento region (Čaj (Masala Chai)).",
                     "type": "nealko"
                 }
             ],
@@ -5473,6 +6128,16 @@
                     "name": "Jamu (bylinný nápoj)",
                     "desc": "Typický nápoj pro tento region (Jamu (bylinný nápoj)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se často podává studené nebo vlažné (nasi padang). Rýže je základ, bez ní to není jídlo.",
@@ -5550,6 +6215,16 @@
                     "name": "Whiskey (Jameson)",
                     "desc": "Typický nápoj pro tento region (Whiskey (Jameson)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hospodská kultura je centrem dění. Káva se po večeři často mění na 'Irish Coffee' s whiskey.",
@@ -5616,14 +6291,24 @@
             "alcohol": "Čaj (Chai), Arak, Rozinková šťáva",
             "drinks": [
                 {
-                    "name": "Čaj (Chai)",
-                    "desc": "Typický nápoj pro tento region (Čaj (Chai)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Arak",
                     "desc": "Typický nápoj pro tento region (Arak).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj (Chai)",
+                    "desc": "Typický nápoj pro tento region (Čaj (Chai)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Masgouf (grilovaná ryba) se jí u řeky Tigris. Čaj je extrémně silný a sladký."
@@ -5698,6 +6383,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "V minulosti se jídlo konzervovalo fermentací (žralok, ryby). Dnes je populární hot dog se vším všudy."
@@ -5773,6 +6468,16 @@
                     "name": "Prosecco",
                     "desc": "Typický nápoj pro tento region (Prosecco).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Večeře začíná pozdě (kolem 20:00). Nikdy si nepouštějte cappuccino po jídle, to je jen k snídani. Těstoviny se nekrájejí.",
@@ -5848,6 +6553,16 @@
                     "name": "Arak",
                     "desc": "Typický nápoj pro tento region (Arak).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Šabatová večeře v pátek je posvátná. Košer pravidla oddělují maso a mléko. Hummus se vytírá pitou."
@@ -5925,6 +6640,16 @@
                     "name": "Pivo Red Stripe",
                     "desc": "Typický nápoj pro tento region (Pivo Red Stripe).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ]
         }
@@ -5998,6 +6723,16 @@
                     "name": "Whisky",
                     "desc": "Typický nápoj pro tento region (Whisky).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Před jídlem se říká 'Itadakimasu'. Srkání nudlí je znakem, že vám chutná. V restauracích se nedává spropitné.",
@@ -6069,6 +6804,16 @@
                 {
                     "name": "Čaj",
                     "desc": "Typický nápoj pro tento region (Čaj).",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Čerstvý čaj s hromadou cukru.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
                     "type": "nealko"
                 }
             ],
@@ -6229,6 +6974,16 @@
                     "name": "Amarula",
                     "desc": "Typický nápoj pro tento region (Amarula).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Braai (grilování) je národní vášeň napříč kulturami. Není to jen jídlo, ale celodenní společenská akce.",
@@ -6304,6 +7059,16 @@
                     "name": "Makgeolli (rýžové víno)",
                     "desc": "Typický nápoj pro tento region (Makgeolli (rýžové víno)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Banchan – k jídlu dostanete zdarma spoustu malých mističek s přílohami (kimchi, řasa, tofu).",
@@ -6373,6 +7138,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
                     "name": "Ibiškový čaj",
                     "desc": "Typický nápoj pro tento region (Ibiškový čaj).",
                     "type": "nealko"
@@ -6437,6 +7212,16 @@
                 {
                     "name": "Arak",
                     "desc": "Typický nápoj pro tento region (Arak).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
                     "type": "alko"
                 },
                 {
@@ -6595,6 +7380,16 @@
                     "name": "Rýžové víno",
                     "desc": "Typický nápoj pro tento region (Rýžové víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Street food kultura je velmi silná. Jídlo je levné, čerstvé a dostupné na každém rohu."
@@ -6668,6 +7463,16 @@
                     "name": "Palmové víno",
                     "desc": "Typický nápoj pro tento region (Palmové víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo je velmi rozmanité, 'Afrika v miniatuře'. Ndolé (hořké listy) s krevetami je delikatesa."
@@ -6744,6 +7549,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Old Fashioned",
+                    "desc": "Bourbon/Rye whiskey, cukr, Angostura bitters, pomerančová kůra.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Arnold Palmer",
+                    "desc": "Půl na půl ledový čaj a citronáda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Poutine (hranolky se sýrem a omáčkou) je národní comfort food. Javorový sirup se dává skoro na vše.",
@@ -6816,6 +7631,16 @@
                     "name": "Ponche (likér)",
                     "desc": "Typický nápoj pro tento region (Ponche (likér)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -6958,14 +7783,24 @@
             "alcohol": "Karak čaj, Limonana, Káva",
             "drinks": [
                 {
-                    "name": "Karak čaj",
-                    "desc": "Typický nápoj pro tento region (Karak čaj).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Limonana",
                     "desc": "Typický nápoj pro tento region (Limonana).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Karak čaj",
+                    "desc": "Typický nápoj pro tento region (Karak čaj).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Káva (gahwa) se podává s kardamomem a datlemi na uvítanou. Šálek se drží pravou rukou."
@@ -7030,14 +7865,24 @@
             "alcohol": "Kumys (kobylí mléko), Vodka, Čaj",
             "drinks": [
                 {
-                    "name": "Kumys (kobylí mléko)",
-                    "desc": "Typický nápoj pro tento region (Kumys (kobylí mléko)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Vodka",
                     "desc": "Typický nápoj pro tento region (Vodka).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Kumys (kobylí mléko)",
+                    "desc": "Typický nápoj pro tento region (Kumys (kobylí mléko)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hostu se vždy podává maso (často koňské). Čaj se nalévá jen do poloviny šálku, aby nevychladl a hostitel mohl dolévat."
@@ -7111,6 +7956,16 @@
                     "name": "Dawa (koktejl)",
                     "desc": "Typický nápoj pro tento region (Dawa (koktejl)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Nyama Choma – grilované maso (kozí, hovězí) se jí rukama s přílohou ugali (kukuřičná kaše).",
@@ -7183,6 +8038,21 @@
                     "name": "Toddy (kokosová míza)",
                     "desc": "Typický nápoj pro tento region (Toddy (kokosová míza)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Ryby a kokos na sto způsobů. Jídlo je dar, který se má sdílet."
@@ -7240,7 +8110,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "BBQ kultura je velmi silná. Čerstvé mořské plody a kvalitní káva."
         }
     },
@@ -7311,6 +8202,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Margarita",
+                    "desc": "Tequila, Cointreau, limetková šťáva, sůl na okraji.",
+                    "type": "alko"
+                },
+                {
                     "name": "Káva",
                     "desc": "Typický nápoj pro tento region (Káva).",
                     "type": "nealko"
@@ -7376,13 +8277,23 @@
             "alcohol": "Čerstvé džusy, Čaj s kořením (Alkohol vzácný)",
             "drinks": [
                 {
-                    "name": "Čerstvé džusy",
-                    "desc": "Typický nápoj pro tento region (Čerstvé džusy).",
-                    "type": "nealko"
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
                 },
                 {
-                    "name": "Čaj s kořením (Alkohol vzácný)",
-                    "desc": "Typický nápoj pro tento region (Čaj s kořením (Alkohol vzácný)).",
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Chapman",
+                    "desc": "Rum/Gin, Angostura bitters, Fanta, Sprite a okurka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čerstvé džusy",
+                    "desc": "Typický nápoj pro tento region (Čerstvé džusy).",
                     "type": "nealko"
                 }
             ],
@@ -7457,6 +8368,16 @@
                     "name": "Pivo Ngok",
                     "desc": "Typický nápoj pro tento region (Pivo Ngok).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Místní kuchyně odráží kulturní dědictví a dostupné suroviny. Jídlo je příležitostí k setkání."
@@ -7606,6 +8527,16 @@
                     "name": "Pivo Imperial",
                     "desc": "Typický nápoj pro tento region (Pivo Imperial).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pura Vida – klidný přístup k životu i jídlu. Gallo Pinto (rýže s fazolemi) je základ každé snídaně."
@@ -7685,6 +8616,16 @@
                     "name": "Mojito",
                     "desc": "Typický nápoj pro tento region (Mojito).",
                     "type": "alko"
+                },
+                {
+                    "name": "Margarita",
+                    "desc": "Tequila, Cointreau, limetková šťáva, sůl na okraji.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ]
         }
@@ -7754,6 +8695,16 @@
                 {
                     "name": "Arabská káva (Žádný alkohol)",
                     "desc": "Typický nápoj pro tento region (Arabská káva (Žádný alkohol)).",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Čerstvý čaj s hromadou cukru.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
                     "type": "nealko"
                 }
             ],
@@ -7828,6 +8779,16 @@
                     "name": "Zivania (pálenka)",
                     "desc": "Typický nápoj pro tento region (Zivania (pálenka)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Středomořská dieta. Večeří se pozdě, jídlo se sdílí a pije se víno. Spěchat se nevyplácí."
@@ -7900,6 +8861,16 @@
                     "name": "Vodka",
                     "desc": "Typický nápoj pro tento region (Vodka).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Maso a těstoviny. Jídlo se podává na velkých mísách pro všechny. Čaj je hlavní nápoj."
@@ -7971,6 +8942,16 @@
                     "name": "Lao-Lao (rýžová whisky)",
                     "desc": "Typický nápoj pro tento region (Lao-Lao (rýžová whisky)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Street food kultura je velmi silná. Jídlo je levné, čerstvé a dostupné na každém rohu."
@@ -8047,6 +9028,16 @@
                     "name": "Zázvorové pivo",
                     "desc": "Typický nápoj pro tento region (Zázvorové pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Grilování masa je vášeň. Jídlo je směsí domorodých a evropských vlivů."
@@ -8121,6 +9112,16 @@
                     "name": "Víno",
                     "desc": "Typický nápoj pro tento region (Víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Mezze – stůl plný malých talířků. Arak (anýzová pálenka) se pije s vodou k jídlu."
@@ -8191,6 +9192,16 @@
                 {
                     "name": "Káva (Alkohol zakázán)",
                     "desc": "Typický nápoj pro tento region (Káva (Alkohol zakázán)).",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Čerstvý čaj s hromadou cukru.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
                     "type": "nealko"
                 }
             ],
@@ -8263,6 +9274,16 @@
                     "name": "Palmové víno",
                     "desc": "Typický nápoj pro tento region (Palmové víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -8334,6 +9355,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Důraz na etiketu a kvalitní suroviny. Večeře je časem pro rodinu a konverzaci."
@@ -8406,6 +9437,16 @@
                     "name": "Midus (medovina)",
                     "desc": "Typický nápoj pro tento region (Midus (medovina)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jednoduché, syté jídlo. Káva je nezbytností. Ryby a chléb jsou základ."
@@ -8478,6 +9519,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jednoduché, syté jídlo. Káva je nezbytností. Ryby a chléb jsou základ."
@@ -8552,6 +9603,16 @@
                     "name": "Crémant",
                     "desc": "Typický nápoj pro tento region (Crémant).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Důraz na etiketu a kvalitní suroviny. Večeře je časem pro rodinu a konverzaci."
@@ -8608,7 +9669,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Jídlo se servíruje najednou doprostřed stolu. Jí se hůlkami. Nalévat pití sám sobě je neslušné."
         }
     },
@@ -8679,6 +9761,16 @@
                     "name": "Pivo THB",
                     "desc": "Typický nápoj pro tento region (Pivo THB).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Rýže (Vary) se jí ke všemu, i k těstovinám. K tomu 'Ranovola' – voda z rýžového odvaru."
@@ -8744,14 +9836,24 @@
             "alcohol": "Teh Tarik (čaj), Tuak (rýžové víno), Bandung",
             "drinks": [
                 {
-                    "name": "Teh Tarik (čaj)",
-                    "desc": "Typický nápoj pro tento region (Teh Tarik (čaj)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Tuak (rýžové víno)",
                     "desc": "Typický nápoj pro tento region (Tuak (rýžové víno)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Teh Tarik (čaj)",
+                    "desc": "Typický nápoj pro tento region (Teh Tarik (čaj)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Mamak stánky (otevřené 24/7) jsou centrem nočního života. Jídlo je směsí malajských, čínských a indických vlivů."
@@ -8824,6 +9926,16 @@
                     "name": "Pivo Carlsberg (Green)",
                     "desc": "Typický nápoj pro tento region (Pivo Carlsberg (Green)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Základem je kukuřičná kaše. Maso je sváteční. Jídlo se sdílí s rodinou."
@@ -8883,14 +9995,24 @@
             "alcohol": "Kokosová voda (Kurumba), Raa (toddy), Čaj",
             "drinks": [
                 {
-                    "name": "Kokosová voda (Kurumba)",
-                    "desc": "Typický nápoj pro tento region (Kokosová voda (Kurumba)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Raa (toddy)",
                     "desc": "Typický nápoj pro tento region (Raa (toddy)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Kokosová voda (Kurumba)",
+                    "desc": "Typický nápoj pro tento region (Kokosová voda (Kurumba)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo je silně kořeněné. Jí se tradičně pravou rukou. Sdílení jídla je znakem přátelství."
@@ -8956,14 +10078,24 @@
             "alcohol": "Čaj (3 kola), Zázvorová šťáva",
             "drinks": [
                 {
-                    "name": "Čaj (3 kola)",
-                    "desc": "Typický nápoj pro tento region (Čaj (3 kola)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Zázvorová šťáva",
                     "desc": "Typický nápoj pro tento region (Zázvorová šťáva).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj (3 kola)",
+                    "desc": "Typický nápoj pro tento region (Čaj (3 kola)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -9031,6 +10163,16 @@
                 {
                     "name": "Pivo Cisk",
                     "desc": "Typický nápoj pro tento region (Pivo Cisk).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Gin & Tonic (Evropský styl)",
+                    "desc": "Prémiový gin, řemeslný tonic, rozmarýn a jalovec.",
                     "type": "alko"
                 },
                 {
@@ -9103,14 +10245,24 @@
             ],
             "drinks": [
                 {
-                    "name": "Mátový čaj",
-                    "desc": "Typický nápoj pro tento region (Mátový čaj).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Víno (Meknes)",
                     "desc": "Typický nápoj pro tento region (Víno (Meknes)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Typický nápoj pro tento region (Mátový čaj).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se často podává na velkém společném talíři, jí se rukou (pomocí chleba) z jedné části mísy.",
@@ -9176,13 +10328,23 @@
             "alcohol": "Kokosová voda, Pandanový džus",
             "drinks": [
                 {
-                    "name": "Kokosová voda",
-                    "desc": "Typický nápoj pro tento region (Kokosová voda).",
-                    "type": "nealko"
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
                 },
                 {
-                    "name": "Pandanový džus",
-                    "desc": "Typický nápoj pro tento region (Pandanový džus).",
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Kokosová voda",
+                    "desc": "Typický nápoj pro tento region (Kokosová voda).",
                     "type": "nealko"
                 }
             ],
@@ -9334,6 +10496,16 @@
                     "name": "Pivo Phoenix",
                     "desc": "Typický nápoj pro tento region (Pivo Phoenix).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo je tavící kotlík kultur (Indie, Čína, Evropa). Street food (Dholl puri) je všude."
@@ -9404,6 +10576,16 @@
                 {
                     "name": "Zrig (velbloudí mléko)",
                     "desc": "Typický nápoj pro tento region (Zrig (velbloudí mléko)).",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Jogurtový nápoj (Ayran/Lassi)",
+                    "desc": "Osvěžující slaný jogurt.",
                     "type": "nealko"
                 }
             ],
@@ -9555,6 +10737,16 @@
                     "name": "Víno (Tokaj)",
                     "desc": "Typický nápoj pro tento region (Víno (Tokaj)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Paprika je základem všeho. Guláš se vaří v kotlíku na otevřeném ohni jako společenská událost."
@@ -9706,6 +10898,16 @@
                     "name": "Mezcal",
                     "desc": "Typický nápoj pro tento region (Mezcal).",
                     "type": "alko"
+                },
+                {
+                    "name": "Old Fashioned",
+                    "desc": "Bourbon/Rye whiskey, cukr, Angostura bitters, pomerančová kůra.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Arnold Palmer",
+                    "desc": "Půl na půl ledový čaj a citronáda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Oběd (comida) je hlavním jídlem dne mezi 14. a 16. hodinou. Jídlo je často pálivé a jí se rukama (tacos).",
@@ -9772,6 +10974,16 @@
                 {
                     "name": "Sakau (Kava)",
                     "desc": "Typický nápoj pro tento region (Sakau (Kava)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
                     "type": "alko"
                 },
                 {
@@ -9850,6 +11062,16 @@
                     "name": "Divin (koňak)",
                     "desc": "Typický nápoj pro tento region (Divin (koňak)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pohostinnost je klíčová. Stoly se prohýbají jídlem, často se připíjí vodkou nebo pálenkou."
@@ -9921,6 +11143,16 @@
                     "name": "Koktejly",
                     "desc": "Typický nápoj pro tento region (Koktejly).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Důraz na etiketu a kvalitní suroviny. Večeře je časem pro rodinu a konverzaci."
@@ -9993,6 +11225,16 @@
                     "name": "Vodka",
                     "desc": "Typický nápoj pro tento region (Vodka).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hostitel nabízí slaný čaj s mlékem. Jídlo je hlavně maso a mléčné výrobky, zeleniny je málo."
@@ -10141,6 +11383,16 @@
                     "name": "Rum Tipo Tinto",
                     "desc": "Typický nápoj pro tento region (Rum Tipo Tinto).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Piri-piri kuře je odkazem portugalců. Krevety z pobřeží jsou vyhlášené."
@@ -10202,6 +11454,16 @@
                 {
                     "name": "Pivo Myanmar",
                     "desc": "Typický nápoj pro tento region (Pivo Myanmar).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
                     "type": "alko"
                 },
                 {
@@ -10291,6 +11553,16 @@
                     "name": "Víno",
                     "desc": "Typický nápoj pro tento region (Víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Grilování masa je vášeň. Jídlo je směsí domorodých a evropských vlivů."
@@ -10355,13 +11627,23 @@
             "alcohol": "Kokosová voda, Ledový čaj",
             "drinks": [
                 {
-                    "name": "Kokosová voda",
-                    "desc": "Typický nápoj pro tento region (Kokosová voda).",
-                    "type": "nealko"
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
                 },
                 {
-                    "name": "Ledový čaj",
-                    "desc": "Typický nápoj pro tento region (Ledový čaj).",
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Kokosová voda",
+                    "desc": "Typický nápoj pro tento region (Kokosová voda).",
                     "type": "nealko"
                 }
             ],
@@ -10434,6 +11716,16 @@
                     "name": "Tongba (prosové pivo)",
                     "desc": "Typický nápoj pro tento region (Tongba (prosové pivo)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Dal Bhat (čočka s rýží) se jí dvakrát denně. Jí se pravou rukou. Do jídla se nikdy nefouká."
@@ -10497,14 +11789,24 @@
             "alcohol": "Čaj (Tuareg tea), Prosové pivo",
             "drinks": [
                 {
-                    "name": "Čaj (Tuareg tea)",
-                    "desc": "Typický nápoj pro tento region (Čaj (Tuareg tea)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Prosové pivo",
                     "desc": "Typický nápoj pro tento region (Prosové pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj (Tuareg tea)",
+                    "desc": "Typický nápoj pro tento region (Čaj (Tuareg tea)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -10580,6 +11882,16 @@
                     "name": "Pivo Star",
                     "desc": "Typický nápoj pro tento region (Pivo Star).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo musí být pálivé. Polévky se jedí rukou pomocí 'fufu' (hutná kaše), která se do polévky namáčí."
@@ -10651,6 +11963,16 @@
                     "name": "Pivo Toña",
                     "desc": "Typický nápoj pro tento region (Pivo Toña).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Gallo Pinto se jí 3x denně. Jídlo se často podává na banánovém listu."
@@ -10709,7 +12031,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
         }
     },
@@ -10782,6 +12125,16 @@
                     "name": "Jenever (gin)",
                     "desc": "Typický nápoj pro tento region (Jenever (gin)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Oběd je často jen rychlý sendvič se sýrem. Večeře je teplá a jí se brzy, kolem 18:00.",
@@ -10841,7 +12194,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "BBQ kultura je velmi silná. Čerstvé mořské plody a kvalitní káva."
         }
     },
@@ -10915,6 +12289,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Matpakke – tradiční oběd do práce: chléb s něčím, zabalený v papíru. Večeře je brzy, kolem 17:00.",
@@ -10973,7 +12357,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Jídlo se peče v zemních pecích. Základem je taro, yam a kokos. Vepřové je slavnostní."
         }
     },
@@ -11047,6 +12452,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hangi – jídlo vařené v zemní peci na horkých kamenech, má specifickou uzenou chuť.",
@@ -11123,6 +12538,16 @@
                     "name": "Pils)",
                     "desc": "Typický nápoj pro tento region (Pils)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Na zdraví si lidé připíjejí s očním kontaktem (Prost!). Chleba (Brot) je v Německu brán velmi vážně.",
@@ -11187,13 +12612,23 @@
             "alcohol": "Káva s kardamomem, Karak čaj, Laban",
             "drinks": [
                 {
-                    "name": "Káva s kardamomem",
-                    "desc": "Typický nápoj pro tento region (Káva s kardamomem).",
-                    "type": "nealko"
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
                 },
                 {
-                    "name": "Karak čaj",
-                    "desc": "Typický nápoj pro tento region (Karak čaj).",
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Káva s kardamomem",
+                    "desc": "Typický nápoj pro tento region (Káva s kardamomem).",
                     "type": "nealko"
                 }
             ],
@@ -11341,14 +12776,24 @@
             "alcohol": "Kokosová voda, Pivo Red Rooster",
             "drinks": [
                 {
-                    "name": "Kokosová voda",
-                    "desc": "Typický nápoj pro tento region (Kokosová voda).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Pivo Red Rooster",
                     "desc": "Typický nápoj pro tento region (Pivo Red Rooster).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Kokosová voda",
+                    "desc": "Typický nápoj pro tento region (Kokosová voda).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Ryby a kokos na sto způsobů. Jídlo je dar, který se má sdílet."
@@ -11419,7 +12864,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Pohostinnost je posvátná. Čaj nebo káva se podává každému hostu. Chléb je posvátný."
         }
     },
@@ -11493,6 +12959,16 @@
                     "name": "Pivo Balboa",
                     "desc": "Typický nápoj pro tento region (Pivo Balboa).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Sancocho (polévka) se vaří na rodinných oslavách. Jídlo je ovlivněno americkou i karibskou kuchyní."
@@ -11567,6 +13043,16 @@
                     "name": "Kava",
                     "desc": "Typický nápoj pro tento region (Kava).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se peče v zemních pecích. Základem je taro, yam a kokos. Vepřové je slavnostní."
@@ -11631,14 +13117,24 @@
             "alcohol": "Tereré (studené maté), Caña (rum), Mosto",
             "drinks": [
                 {
-                    "name": "Tereré (studené maté)",
-                    "desc": "Typický nápoj pro tento region (Tereré (studené maté)).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Caña (rum)",
                     "desc": "Typický nápoj pro tento region (Caña (rum)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Margarita",
+                    "desc": "Tequila, Cointreau, limetková šťáva, sůl na okraji.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Tereré (studené maté)",
+                    "desc": "Typický nápoj pro tento region (Tereré (studené maté)).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Tereré (studené mate) je v horku nezbytnost. Jídlo je směs španělské a guaraní kultury."
@@ -11711,6 +13207,16 @@
                     "name": "Inca Kola",
                     "desc": "Typický nápoj pro tento region (Inca Kola).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Ceviche se jí pouze k obědu, nikdy k večeři (kvůli čerstvosti ryb). Cuy (morče) je sváteční delikatesa.",
@@ -11769,7 +13275,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
         }
     },
@@ -11840,6 +13367,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Kedjenou se vaří v hliněném hrnci (canari) na ohni. Atiéké (maniok) je příloha ke všemu."
@@ -11914,6 +13451,16 @@
                     "name": "Pivo",
                     "desc": "Typický nápoj pro tento region (Pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Polévka je základ jídla. Hostitelka vždy pobízí hosty, aby si přidali, prázdný talíř se ihned doplňuje.",
@@ -12066,6 +13613,16 @@
                     "name": "Víno (Vinho Verde)",
                     "desc": "Typický nápoj pro tento region (Víno (Vinho Verde)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Káva (bica) po jídle je povinnost. Treska (bacalhau) se prý dá připravit na 365 způsobů.",
@@ -12132,13 +13689,23 @@
             "alcohol": "Lassi, Rooh Afza (sirup), Čaj",
             "drinks": [
                 {
-                    "name": "Lassi",
-                    "desc": "Typický nápoj pro tento region (Lassi).",
-                    "type": "nealko"
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
                 },
                 {
-                    "name": "Rooh Afza (sirup)",
-                    "desc": "Typický nápoj pro tento region (Rooh Afza (sirup)).",
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lassi",
+                    "desc": "Typický nápoj pro tento region (Lassi).",
                     "type": "nealko"
                 }
             ],
@@ -12211,6 +13778,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Gin & Tonic (Evropský styl)",
+                    "desc": "Prémiový gin, řemeslný tonic, rozmarýn a jalovec.",
+                    "type": "alko"
+                },
+                {
                     "name": "Almdudler",
                     "desc": "Bylinná limonáda, 'rakouská Coca-Cola'.",
                     "type": "nealko"
@@ -12278,6 +13855,16 @@
                 {
                     "name": "Malamba (z cukrové třtiny)",
                     "desc": "Typický nápoj pro tento region (Malamba (z cukrové třtiny)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
                     "type": "alko"
                 },
                 {
@@ -12358,6 +13945,16 @@
                     "name": "Víno",
                     "desc": "Typický nápoj pro tento region (Víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Balkánská pohostinnost. Maso na grilu, zelenina a sýr. Porce jsou obrovské."
@@ -12432,6 +14029,16 @@
                     "name": "Kvas",
                     "desc": "Typický nápoj pro tento region (Kvas).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Přípitky jsou dlouhé a květnaté. Hostitel se stará, aby hosté měli stále plný talíř i sklenici."
@@ -12499,6 +14106,16 @@
                 {
                     "name": "Urwagwa (banánové pivo)",
                     "desc": "Typický nápoj pro tento region (Urwagwa (banánové pivo)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
                     "type": "alko"
                 },
                 {
@@ -12727,6 +14344,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Margarita",
+                    "desc": "Tequila, Cointreau, limetková šťáva, sůl na okraji.",
+                    "type": "alko"
+                },
+                {
                     "name": "Tiky (ovocná limonáda)",
                     "desc": "Typický nápoj pro tento region (Tiky (ovocná limonáda)).",
                     "type": "nealko"
@@ -12802,6 +14429,16 @@
                     "name": "Pivo Vailima",
                     "desc": "Typický nápoj pro tento region (Pivo Vailima).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
@@ -12873,6 +14510,16 @@
                     "name": "Likér Tilus",
                     "desc": "Typický nápoj pro tento region (Likér Tilus).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Středomořská dieta. Večeří se pozdě, jídlo se sdílí a pije se víno. Spěchat se nevyplácí."
@@ -12944,6 +14591,16 @@
                     "name": "Jallab",
                     "desc": "Typický nápoj pro tento region (Jallab).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Čerstvý čaj s hromadou cukru.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jí se na zemi na kobercích, pravou rukou. Levá ruka je považována za nečistou. Káva se dolévá, dokud nezatřesete šálkem.",
@@ -13018,6 +14675,16 @@
                     "name": "Bouye (baobab)",
                     "desc": "Typický nápoj pro tento region (Bouye (baobab)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Teranga – pohostinnost. Každý je vítán u společné mísy Thiéboudienne (ryba s rýží)."
@@ -13089,6 +14756,16 @@
                     "name": "Pivo Taedonggang",
                     "desc": "Typický nápoj pro tento region (Pivo Taedonggang).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se servíruje najednou doprostřed stolu. Jí se hůlkami. Nalévat pití sám sobě je neslušné."
@@ -13161,6 +14838,16 @@
                     "name": "Víno (Tikveš)",
                     "desc": "Typický nápoj pro tento region (Víno (Tikveš)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Balkánská pohostinnost. Maso na grilu, zelenina a sýr. Porce jsou obrovské."
@@ -13220,7 +14907,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Ryby a kokos na sto způsobů. Jídlo je dar, který se má sdílet."
         }
     },
@@ -13292,6 +15000,16 @@
                     "name": "Pivo SeyBrew",
                     "desc": "Typický nápoj pro tento region (Pivo SeyBrew).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Kreolská kuchyně – ryby, kokos, kari. Netopýří kari je místní specialita pro odvážné."
@@ -13363,6 +15081,16 @@
                     "name": "Poyo (palmové víno)",
                     "desc": "Typický nápoj pro tento region (Poyo (palmové víno)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -13437,6 +15165,16 @@
                     "name": "Tygří pivo",
                     "desc": "Typický nápoj pro tento region (Tygří pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hawker centra – obří jídelny s levným a kvalitním jídlem. Místní si rezervují stoly balíčkem kapesníků (chope).",
@@ -13513,6 +15251,16 @@
                     "name": "Tatratea",
                     "desc": "Typický nápoj pro tento region (Tatratea).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Hostitel vždy nabízí hostům jídlo a pití, odmítnutí se považuje za nezdvořilé. Přípitek 'Na zdraví' je nutností."
@@ -13586,6 +15334,16 @@
                     "name": "Borovničke (likér)",
                     "desc": "Typický nápoj pro tento region (Borovničke (likér)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Oběd je hlavní jídlo dne, často polévka a hlavní chod. Pivo nebo víno k jídlu je běžné."
@@ -13657,6 +15415,16 @@
                 {
                     "name": "Velbloudí mléko",
                     "desc": "Typický nápoj pro tento region (Velbloudí mléko).",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Čerstvý čaj s hromadou cukru.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
                     "type": "nealko"
                 }
             ],
@@ -13730,6 +15498,16 @@
                     "name": "Víno",
                     "desc": "Typický nápoj pro tento region (Víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Balkánská pohostinnost. Maso na grilu, zelenina a sýr. Porce jsou obrovské."
@@ -13796,6 +15574,16 @@
                 {
                     "name": "Arak (kokosový)",
                     "desc": "Typický nápoj pro tento region (Arak (kokosový)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
                     "type": "alko"
                 },
                 {
@@ -13874,6 +15662,16 @@
                     "name": "Pivo Mocaf",
                     "desc": "Typický nápoj pro tento region (Pivo Mocaf).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Místní kuchyně odráží kulturní dědictví a dostupné suroviny. Jídlo je příležitostí k setkání."
@@ -13945,6 +15743,16 @@
                     "name": "Pivo Parbo",
                     "desc": "Typický nápoj pro tento region (Pivo Parbo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Maso hraje velkou roli. Pozdní večeře. Oběd je důležitější než večeře v mnoha zemích."
@@ -14097,6 +15905,16 @@
                     "name": "Kakao tea",
                     "desc": "Typický nápoj pro tento region (Kakao tea).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Kreolská kuchyně plná koření, ryb a ovoce. Jídlo je často pálivé a smažené."
@@ -14245,6 +16063,16 @@
                     "name": "Ting",
                     "desc": "Typický nápoj pro tento region (Ting).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Kreolská kuchyně plná koření, ryb a ovoce. Jídlo je často pálivé a smažené."
@@ -14469,6 +16297,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
+                    "type": "alko"
+                },
+                {
                     "name": "Káva",
                     "desc": "Typický nápoj pro tento region (Káva).",
                     "type": "nealko"
@@ -14543,6 +16381,16 @@
                     "name": "Hairoun pivo",
                     "desc": "Typický nápoj pro tento region (Hairoun pivo).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Kreolská kuchyně plná koření, ryb a ovoce. Jídlo je často pálivé a smažené."
@@ -14701,6 +16549,16 @@
                     "name": "Aradaib",
                     "desc": "Typický nápoj pro tento region (Aradaib).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Čerstvý čaj s hromadou cukru.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se jí často z jedné společné mísy rukou (pomocí chleba). Mátový čaj ukončuje hodování."
@@ -14767,6 +16625,16 @@
                 {
                     "name": "Arak",
                     "desc": "Typický nápoj pro tento region (Arak).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
                     "type": "alko"
                 },
                 {
@@ -14845,6 +16713,16 @@
                     "name": "Konyagi (gin)",
                     "desc": "Typický nápoj pro tento region (Konyagi (gin)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Základem je kukuřičná kaše. Maso je sváteční. Jídlo se sdílí s rodinou."
@@ -14911,6 +16789,16 @@
                 {
                     "name": "Bubble Tea",
                     "desc": "Typický nápoj pro tento region (Bubble Tea).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
                     "type": "alko"
                 },
                 {
@@ -14989,6 +16877,16 @@
                     "name": "Thajská whisky (Mekhong)",
                     "desc": "Typický nápoj pro tento region (Thajská whisky (Mekhong)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se sdílí, každý má svůj talíř s rýží. Všechny chutě (sladká, kyselá, slaná, pálivá) musí být vyvážené.",
@@ -15061,6 +16959,16 @@
                     "name": "Tchouk (prosové pivo)",
                     "desc": "Typický nápoj pro tento region (Tchouk (prosové pivo)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pálivá a kořeněná jídla. Základem jsou hutné kaše (fufu) a omáčky. Jí se rukama."
@@ -15120,7 +17028,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
         }
     },
@@ -15191,6 +17120,16 @@
                     "name": "Pivo Ikale",
                     "desc": "Typický nápoj pro tento region (Pivo Ikale).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
@@ -15263,6 +17202,16 @@
                     "name": "Pivo Carib",
                     "desc": "Typický nápoj pro tento region (Pivo Carib).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Doubles (cizrna v placce) je nejpopulárnější street food. Jídlo je mix indické a kreolské kuchyně."
@@ -15328,6 +17277,16 @@
                 {
                     "name": "Boukha (fíková pálenka)",
                     "desc": "Typický nápoj pro tento region (Boukha (fíková pálenka)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
                     "type": "alko"
                 },
                 {
@@ -15402,6 +17361,16 @@
                     "type": "alko"
                 },
                 {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
                     "name": "Čaj",
                     "desc": "Typický nápoj pro tento region (Čaj).",
                     "type": "nealko"
@@ -15470,14 +17439,24 @@
             "alcohol": "Čaj, Vodka, Koňak",
             "drinks": [
                 {
-                    "name": "Čaj",
-                    "desc": "Typický nápoj pro tento region (Čaj).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Vodka",
                     "desc": "Typický nápoj pro tento region (Vodka).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj",
+                    "desc": "Typický nápoj pro tento region (Čaj).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Maso a těstoviny. Jídlo se podává na velkých mísách pro všechny. Čaj je hlavní nápoj."
@@ -15626,6 +17605,21 @@
                     "name": "Toddy",
                     "desc": "Typický nápoj pro tento region (Toddy).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
@@ -15690,14 +17684,24 @@
             "alcohol": "Zelený čaj, Vodka",
             "drinks": [
                 {
-                    "name": "Zelený čaj",
-                    "desc": "Typický nápoj pro tento region (Zelený čaj).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Vodka",
                     "desc": "Typický nápoj pro tento region (Vodka).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Zelený čaj",
+                    "desc": "Typický nápoj pro tento region (Zelený čaj).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Maso a těstoviny. Jídlo se podává na velkých mísách pro všechny. Čaj je hlavní nápoj."
@@ -15773,6 +17777,16 @@
                     "name": "Pivo (IPA)",
                     "desc": "Typický nápoj pro tento region (Pivo (IPA)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Old Fashioned",
+                    "desc": "Bourbon/Rye whiskey, cukr, Angostura bitters, pomerančová kůra.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Arnold Palmer",
+                    "desc": "Půl na půl ledový čaj a citronáda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Velké porce a bezedné kelímky (free refill). Spropitné v restauracích (15-20 %) je prakticky povinné.",
@@ -15846,6 +17860,16 @@
                     "name": "Pivo Nile Special",
                     "desc": "Typický nápoj pro tento region (Pivo Nile Special).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Základem je kukuřičná kaše. Maso je sváteční. Jídlo se sdílí s rodinou."
@@ -15921,6 +17945,16 @@
                     "name": "Kvas",
                     "desc": "Typický nápoj pro tento region (Kvas).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Chléb se solí je tradiční přivítání vzácných hostů. Boršč musí odstát do druhého dne, aby byl nejlepší."
@@ -15987,6 +18021,16 @@
                 {
                     "name": "Víno (Tannat)",
                     "desc": "Typický nápoj pro tento region (Víno (Tannat)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Margarita",
+                    "desc": "Tequila, Cointreau, limetková šťáva, sůl na okraji.",
                     "type": "alko"
                 },
                 {
@@ -16057,14 +18101,24 @@
             "alcohol": "Čaj, Vodka",
             "drinks": [
                 {
-                    "name": "Čaj",
-                    "desc": "Typický nápoj pro tento region (Čaj).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Vodka",
                     "desc": "Typický nápoj pro tento region (Vodka).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Čaj",
+                    "desc": "Typický nápoj pro tento region (Čaj).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Plov (pilaf) vaří tradičně muži ve velkých kotlích. Čaj se pije ze zdobených misek (piala)."
@@ -16138,6 +18192,16 @@
                     "name": "Pivo Tusker",
                     "desc": "Typický nápoj pro tento region (Pivo Tusker).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se peče v zemních pecích. Základem je taro, yam a kokos. Vepřové je slavnostní."
@@ -16205,6 +18269,21 @@
                     "name": "Mešní víno",
                     "desc": "Typický nápoj pro tento region (Mešní víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Gin & Tonic (Evropský styl)",
+                    "desc": "Prémiový gin, řemeslný tonic, rozmarýn a jalovec.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Středomořská dieta. Večeří se pozdě, jídlo se sdílí a pije se víno. Spěchat se nevyplácí."
@@ -16280,6 +18359,16 @@
                     "name": "Gin & Tonic",
                     "desc": "Typický nápoj pro tento region (Gin & Tonic).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Sunday Roast (nedělní pečeně) v hospodě je instituce. Čaj o páté s mlékem a sušenkami je stále populární.",
@@ -16353,6 +18442,16 @@
                     "name": "Pivo Polar",
                     "desc": "Typický nápoj pro tento region (Pivo Polar).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mojito",
+                    "desc": "Bílý rum, čerstvá máta, limetka, cukr a soda.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Agua Fresca",
+                    "desc": "Mixované ovoce (meloun/ananas) s vodou a limetkou.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Arepas se jedí ke snídani, obědu i večeři. Jsou plněné sýrem, masem nebo fazolemi."
@@ -16424,6 +18523,16 @@
                     "name": "Rýžové víno",
                     "desc": "Typický nápoj pro tento region (Rýžové víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Mango Lassi",
+                    "desc": "Hustý jogurtový nápoj s mangem a kardamomem.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Pho se jí klidně k snídani. Čerstvé bylinky jsou nutností ke každému jídlu. Jí se hůlkami a lžící.",
@@ -16482,7 +18591,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "BBQ kultura je velmi silná. Čerstvé mořské plody a kvalitní káva."
         }
     },
@@ -16541,14 +18671,24 @@
             "alcohol": "Káva, Palmové víno",
             "drinks": [
                 {
-                    "name": "Káva",
-                    "desc": "Typický nápoj pro tento region (Káva).",
-                    "type": "nealko"
-                },
-                {
                     "name": "Palmové víno",
                     "desc": "Typický nápoj pro tento region (Palmové víno).",
                     "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Káva",
+                    "desc": "Typický nápoj pro tento region (Káva).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Street food kultura je velmi silná. Jídlo je levné, čerstvé a dostupné na každém rohu."
@@ -16606,7 +18746,28 @@
                 }
             ],
             "alcohol": "Lokální pivo, Víno, Místní speciality",
-            "drinks": [],
+            "drinks": [
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Pavlova Punch",
+                    "desc": "Šumivé víno s jahodami a kiwi sirupem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters (Alko verze)",
+                    "desc": "Vodka, citronová limonáda, limetka a Angostura.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
+                }
+            ],
             "tradition": "Tradiční hostiny s pečeným prasetem. Ovoce a ryby jsou denním chlebem."
         }
     },
@@ -16676,6 +18837,16 @@
                     "name": "Chibuku (kukuřičné pivo)",
                     "desc": "Typický nápoj pro tento region (Chibuku (kukuřičné pivo)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Základem je kukuřičná kaše. Maso je sváteční. Jídlo se sdílí s rodinou."
@@ -16761,6 +18932,16 @@
                     "name": "Chibuku",
                     "desc": "Typický nápoj pro tento region (Chibuku).",
                     "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Bissap",
+                    "desc": "Ibiškový čaj s mátou a vanilkou, podávaný ledově vychlazený.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Grilování masa je vášeň. Jídlo je směsí domorodých a evropských vlivů."
@@ -16911,13 +19092,23 @@
             "alcohol": "Černý čaj, Víno, Koňak, Šerbet",
             "drinks": [
                 {
-                    "name": "Azeri Tea",
-                    "desc": "Podávaný ve skleničkách 'armudu' s kostkou cukru v ústech.",
-                    "type": "nealko"
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
                 },
                 {
-                    "name": "Šerbet",
-                    "desc": "Osvěžující nápoj z ovoce, růžové vody a cukru.",
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lychee Martini",
+                    "desc": "Vodka, liči sirup/šťáva, vermut.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Azeri Tea",
+                    "desc": "Podávaný ve skleničkách 'armudu' s kostkou cukru v ústech.",
                     "type": "nealko"
                 }
             ],
@@ -17068,6 +19259,16 @@
                     "name": "Doogh (jogurtový nápoj)",
                     "desc": "Typický nápoj pro tento region (Doogh (jogurtový nápoj)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Mátový čaj",
+                    "desc": "Čerstvý čaj s hromadou cukru.",
+                    "type": "nealko"
+                },
+                {
+                    "name": "Čerstvá ovocná šťáva",
+                    "desc": "Granátové jablko nebo pomeranč.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Taarof – složitý systém zdvořilosti. Hostitel vám nabídne jídlo, vy odmítnete, on nabídne znovu... až si vezmete."
@@ -17134,6 +19335,16 @@
                 {
                     "name": "Gala (pivo)",
                     "desc": "Typický nápoj pro tento region (Gala (pivo)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Dawa",
+                    "desc": "Vodka, med, limetka a drcený led (keňská klasika).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Amarula on Ice",
+                    "desc": "Smetanový likér z ovoce marula na ledu.",
                     "type": "alko"
                 },
                 {
@@ -17212,6 +19423,16 @@
                     "name": "Víno (Vranac)",
                     "desc": "Typický nápoj pro tento region (Víno (Vranac)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Balkánská pohostinnost. Maso na grilu, zelenina a sýr. Porce jsou obrovské."
@@ -17280,14 +19501,24 @@
             "alcohol": "Pivo (Ležák), Becherovka, Slivovice, Kofola",
             "drinks": [
                 {
-                    "name": "Pivo (Ležák)",
-                    "desc": "Typický nápoj pro tento region (Pivo (Ležák)).",
+                    "name": "Beton",
+                    "desc": "Becherovka s tonicem a citronem.",
                     "type": "alko"
                 },
                 {
-                    "name": "Becherovka",
-                    "desc": "Typický nápoj pro tento region (Becherovka).",
+                    "name": "Bavorák (Fernet Citrus & Tonic)",
+                    "desc": "Fernet Citrus, tonic, led.",
                     "type": "alko"
+                },
+                {
+                    "name": "Tuzemák s Colou",
+                    "desc": "Tradiční český 'rum' s kolou a citronem.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Kofola",
+                    "desc": "Točená bylinná limonáda s plátkem citronu.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Oběd je hlavním jídlem dne, často začíná polévkou. V neděli se tradičně schází celá rodina u slavnostního oběda."
@@ -17355,6 +19586,16 @@
                 {
                     "name": "Baijiu (pálenka)",
                     "desc": "Typický nápoj pro tento region (Baijiu (pálenka)).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Sake Bomb",
+                    "desc": "Shot sake vhozený do sklenice japonského piva.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Singapore Sling",
+                    "desc": "Gin, třešňový likér, Cointreau, benediktinka, ananas a limetka.",
                     "type": "alko"
                 },
                 {
@@ -17435,6 +19676,16 @@
                     "name": "Metaxa",
                     "desc": "Typický nápoj pro tento region (Metaxa).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Meze – spousta malých talířků sdílených uprostřed stolu. Jídlo trvá hodiny a je doprovázeno diskuzí.",
@@ -17507,6 +19758,16 @@
                     "name": "Kava",
                     "desc": "Typický nápoj pro tento region (Kava).",
                     "type": "alko"
+                },
+                {
+                    "name": "Espresso Martini",
+                    "desc": "Vodka, kávový likér a espresso (australský hit).",
+                    "type": "alko"
+                },
+                {
+                    "name": "Lemon Lime & Bitters",
+                    "desc": "Limonáda, limetkový kordial a kapka Angostury (nealko ikona).",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Jídlo se peče v zemních pecích. Základem je taro, yam a kokos. Vepřové je slavnostní."
@@ -17581,6 +19842,16 @@
                     "name": "Víno (Rioja)",
                     "desc": "Typický nápoj pro tento region (Víno (Rioja)).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Tapas – malé porce jídla sdílené s přáteli v baru. Večeří se velmi pozdě, často až po 22. hodině.",
@@ -17734,6 +20005,16 @@
                     "name": "Cider",
                     "desc": "Typický nápoj pro tento region (Cider).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Fika – pauza na kávu a skořicový šnek, kterou Švédové dodržují i v práci. Je to čas na socializaci.",
@@ -17810,6 +20091,16 @@
                     "name": "Absint",
                     "desc": "Typický nápoj pro tento region (Absint).",
                     "type": "alko"
+                },
+                {
+                    "name": "Aperol Spritz",
+                    "desc": "3 díly Prosecca, 2 díly Aperolu, 1 díl sody, led a pomeranč.",
+                    "type": "alko"
+                },
+                {
+                    "name": "Domácí limonáda",
+                    "desc": "Sezónní ovoce (jahody/okurka), máta, soda.",
+                    "type": "nealko"
                 }
             ],
             "tradition": "Fondue se jí z jednoho hrnce, kdo ztratí chleba v sýru, platí rundu nebo musí splnit úkol.",
