@@ -1,0 +1,240 @@
+import json
+
+# Fun facts, stereotypes, and cultural quirks
+# Mix of "It is said that...", specific laws, funny habits, or interesting trivia.
+
+facts_db = {
+    "AFG": "V Afghánistánu je národním sportem 'Buzkashi', což je v podstatě pólo, ale hraje se s bezhlavou zdechlinou kozy místo míče.",
+    "ALB": "Kývání hlavou nahoru a dolů znamená 'NE', zatímco kroucení hlavou ze strany na stranu znamená 'ANO'. Přesně naopak než u nás!",
+    "DZA": "Alžířané jsou mistři v pohostinnosti – pokud vás pozvou na čaj, odmítnutí je téměř urážkou a 'rychlá káva' tam trvá minimálně hodinu.",
+    "AND": "Andorra nemá armádu, ale má teoreticky povinnost, aby každý dům vlastnil pušku pro případ obrany. A pošťáci tam nosí poštu zdarma.",
+    "AGO": "V Angole je strom Baobab posvátný a věří se, že kdo ho pokácí se zlým úmyslem, toho stihne neštěstí. Taky tam najdete nejdražší město pro expaty (Luanda).",
+    "ATG": "Antigua má prý 365 pláží – jednu na každý den v roce. Místní se tím velmi rádi chlubí.",
+    "ARG": "Argentinci chodí na večeři nejdříve v 22:00. Párty začíná ve 2 ráno. A polibek na tvář je povinný i mezi chlapy při pozdravu.",
+    "ARM": "Šachy jsou v Arménii povinným školním předmětem. Každý je tam trochu velmistr.",
+    "AUS": "V Austrálii je více klokanů než lidí. A Rakušané (Austria) neustále prodávají trička 'No Kangaroos in Austria', aby si je lidé nepletli.",
+    "AUT": "Rakušané milují tituly. I v bance vás osloví 'Pane magistře'. A dort Sacher je státní tajemství.",
+    "AZE": "V Ázerbájdžánu milují čaj s džemem. Ale nedávají džem do čaje – jedí ho po lžičkách k tomu čaji.",
+    "BHS": "Na Bahamách existuje ostrov obývaný pouze plavajícími prasaty. Místní věří, že vidět je přináší štěstí (a dobré fotky).",
+    "BHR": "Bahrajn má 'Strom života', který roste uprostřed pouště bez zdroje vody už 400 let. Místní věří, že ho zavlažuje bůh Enki.",
+    "BGD": "Bangladéšané milují kriket tak moc, že během důležitých zápasů se v podstatě zastaví život v celé zemi.",
+    "BRB": "Barbados je rodištěm rumu. Místní říkají, že rum léčí všechno – od rýmy po zlomené srdce.",
+    "BLR": "Bělorusové jsou bramborový národ. Existuje tam přes 300 receptů na bramboráky (draniki) a berou to smrtelně vážně.",
+    "BEL": "Belgičané tvrdí, že vynalezli hranolky (French fries je uráží). A k hranolkám si dávají majonézu, ne kečup. Pivo berou stejně vážně jako víno.",
+    "BLZ": "V Belize je jediná Jaguar rezervace na světě. A mluví se tam anglicky, což v regionu plném španělštiny často turisty zmate.",
+    "BEN": "Benin je kolébkou Voodoo. Není to černá magie, ale státní náboženství. Hadí chrámy jsou tu běžnou turistickou atrakcí.",
+    "BTN": "Bhután neměří HDP, ale 'Hrubé národní štěstí'. A je to jediná země na světě, kde je zakázán prodej tabáku.",
+    "BOL": "Bolívijské 'Cholitas' (ženy v tradičních sukních a buřinkách) se věnují i wrestlingu. Wrestling v krojích je tam populární show.",
+    "BIH": "V Bosně je káva (bosanska kafa) rituál na hodiny. Nikdy se nepije ve chvatu. A 'burek' je pouze s masem, cokoliv jiného je 'pita'.",
+    "BWA": "Botswana je domovem nejvíce slonů na světě. A jejich měna 'Pula' znamená v překladu 'Déšť' – protože déšť je tam vzácný jako peníze.",
+    "BRA": "Brazilci tleskají, když zapadne slunce. Dochvilnost v Brazílii neexistuje, 'za 5 minut' znamená 'za hodinu, možná'.",
+    "BRN": "Sultán z Bruneje má sbírku přes 7000 aut. A občané neplatí žádné daně z příjmu.",
+    "BGR": "Stejně jako v Albánii – Bulhaři kroutí hlavou pro 'ANO' a kývají pro 'NE'. Pozor na to v restauraci!",
+    "BFA": "V Burkině Faso se lidé jmenují podle dne v týdnu, kdy se narodili. Půlka národa se jmenuje stejně.",
+    "BDI": "V Burundi je skupinový běh (jogging) považován za politický akt a byl v minulosti zakazován, aby se lidé neshlukovali.",
+    "CPV": "Na Kapverdách je heslo 'No Stress'. Pokud spěcháte, jste podezřelí.",
+    "KHM": "V Kambodži se narozeniny tradičně neslaví. Mnoho starších lidí ani nezná své přesné datum narození.",
+    "CMR": "Kamerun se nazývá 'Afrika v miniatuře', protože má v sobě všechny typy africké krajiny. A fotbal je tam náboženstvím.",
+    "CAN": "Kanadská omluva ('Sorry') je legendární. Říká se, že Kanaďan se omluví i stromu, do kterého narazil. A polévají javorovým sirupem i sníh.",
+    "CAF": "Je to jedno z nejlepších míst na světě pro pozorování hvězd, protože tam není téměř žádný světelný smog.",
+    "TCD": "Jezero Čad bývalo obrovské, teď je maličké. Místní věří, že v něm žijí duchové hrochů.",
+    "CHL": "V Chile si manželé i po svatbě nechávají svá příjmení. A v neděli se tam nesmí stěhovat (ze zákona).",
+    "CHN": "V Číně se na veřejnosti srká polévka – je to znak toho, že vám chutná. Barva smutku je bílá, ne černá.",
+    "COL": "Kolumbijci každé ráno pijí 'tinto' (sladkou černou kávu) a národní sport 'Tejo' zahrnuje házení kovových disků na výbušniny.",
+    "COM": "Na Komorách se konají 'Grand Mariage' (velké svatby), které trvají týdny a rodiny na ně šetří celý život. Je to statusová záležitost.",
+    "COG": "V Kongu existuje subkultura 'Sapeurs' – muži, kteří i v chudobě nosí drahé značkové obleky a chovají se jako gentlemani.",
+    "COD": "DR Kongo je domovem hudby rumba, která roztančí celou Afriku. Mít styl je důležitější než mít peníze.",
+    "CRI": "V Kostarice nemají armádu a místo adres používají popisy ('200 metrů od starého stromu doprava').",
+    "CIV": "Pobřeží slonoviny je největším producentem kakaa. Přesto mnoho farmářů čokoládu nikdy neochutnalo.",
+    "HRV": "Chorvati vynalezli kravatu (kravata -> Hrvat). A 'kava na špici' (káva v centru v nejlepším oblečení) je národní sport.",
+    "CUB": "Na Kubě je stopování oficiální způsob dopravy. Vládní vozy mají povinnost brát stopaře.",
+    "CYP": "Kypřané milují sýr Halloumi tak moc, že se soudí s celým světem o ochrannou známku.",
+    "CZE": "Češi jsou mistři ve 'sdílení ticha' u piva. A nosí ponožky v sandálech (ale už se to lepší!). Houbaření je národní vášeň.",
+    "DNK": "Dánové nechávají kočárky s dětmi spát venku před kavárnou, i když mrzne. Věří, že čerstvý vzduch buduje imunitu.",
+    "DJI": "Džibutsko je jedním z nejteplejších míst na zemi, ale lidé tam neustále pijí horký čaj.",
+    "DMA": "Dominika (ne republika) má řeku 'Boiling Lake', která doslova vře. Místní se tam prý chodí saunovat (ale ne moc blízko!).",
+    "DOM": "V Dominikánské republice znamená 'ahora' (teď) cokoliv od 5 minut do nekonečna. A tleská se, když letadlo přistane.",
+    "ECU": "Ekvádor uznal 'Přírodu' jako subjekt s ústavními právy. Stromy tam mají právo na existenci.",
+    "EGY": "V Egyptě se troubí pořád. Ne jen varovně, ale jako pozdrav, nadávka, nebo jen 'jsem tady'. Je to jazyk aut.",
+    "SLV": "V Salvadoru je národním jídlem 'pupusa' a existuje zákon, který ji prohlásil za národní dědictví. Mají na to i svátek.",
+    "GNQ": "Je to jediná španělsky mluvící země v Africe. A staví si nové hlavní město uprostřed džungle.",
+    "ERI": "V Eritreji se kavárny jmenují 'Bar' a podávají nejlepší espresso v Africe díky italskému vlivu.",
+    "EST": "Estonci vynalezli Skype. Wi-Fi je tam lidským právem a volí se zásadně přes internet (i v lese).",
+    "ETH": "Etiopie má svůj vlastní kalendář, který je o 7 let pozadu za naším. A den tam začíná východem slunce (v 6 ráno je 0:00 hodin).",
+    "FJI": "Na Fidži se nesmí nosit klobouk ve vesnici (je to urážka náčelníka) a 'Fiji time' znamená totální pohodu bez hodinek.",
+    "FIN": "Finové milují saunu – mají jich víc než aut. A jsou mistři v 'trapném tichu', které jim vůbec nepřijde trapné.",
+    "FRA": "Francouz nikdy neřekne 'nevím', řekne 'c'est compliqué' (je to složité). A bageta pod paží není klišé, je to realita.",
+    "GAB": "V Gabonu žijí 'surfující hroši' – hroši, kteří se chodí koupat do oceánu.",
+    "GMB": "V Gambii se volí vhazováním kuliček do barevných barelů. Cinknutí zvonečku potvrdí hlas.",
+    "GEO": "Gruzínci považují hosta za 'dar od Boha'. Přípitek (tamada) může trvat 20 minut a nikdo se nesmí napít dřív, než řečník skončí.",
+    "DEU": "V Německu je 'Ordnung muss sein'. Přecházet na červenou, i když nic nejede, je společenský zločin. V neděli je zakázáno vrtat a sekat trávu.",
+    "GHA": "V Ghaně se pohřby slaví velkolepě. Vyrábí tam rakve ve tvaru ryb, aut, nebo lahví koly (fantasy coffins), aby nebožtík odešel stylově.",
+    "GRC": "Řekové 'plivou' na někoho, koho chválí (tfu tfu tfu), aby ho neuhřknuli. A nikdy nikam nespěchají.",
+    "GRD": "Grenada voní po muškátovém oříšku, který je i na vlajce. Koření tam roste doslova u silnice.",
+    "GTM": "V Guatemale se káva pije sladká a slabá, tu nejlepší vyvážejí. A autobusy (chicken buses) jsou pojízdné diskotéky.",
+    "GIN": "Lidé zde věří na duchy pralesa. Mosty se staví z lián.",
+    "GNB": "V některých kmenech si ženy vybírají manžele tak, že jim před dům položí talíř jídla. Když ho sní, je ruka v rukávě.",
+    "GUY": "Většina obyvatel žije na úzkém pobřeží, zbytek je neprostupná džungle. Vodopády Kaieteur jsou 5x vyšší než Niagara.",
+    "HTI": "Haiti je jedinou zemí, která vznikla úspěšnou vzpourou otroků. Místní jsou na svou nezávislost extrémně hrdí.",
+    "HND": "V Hondurasu prší ryby. Vážně. Ve městě Yoro se jednou ročně koná 'Lluvia de Peces' (déšť ryb).",
+    "HUN": "Maďaři si neťukají pivem. Je to zvyk od roku 1848, kdy Rakušané ťukali na oslavu popravy maďarských generálů. Platilo to 150 let, ale mnozí to drží dodnes.",
+    "ISL": "Islanďané věří na elfy (Huldufólk). Stavební firmy často odklánějí silnice, aby nerušily kameny, kde by mohli bydlet skřítci.",
+    "IND": "V Indii je kývání hlavou do strany (Indian head wobble) univerzální gesto. Může znamenat ano, ne, možná, rozumím, nebo jen 'jsem tady'.",
+    "IDN": "Indonésané se často nezdraví 'Ahoj', ale 'Už jsi jedl?'. Jídlo je středobodem vesmíru.",
+    "IRN": "Íránci používají 'Taarof' – systém extrémní zdvořilosti. Taxikář odmítne peníze, vy musíte naléhat. Obchodník vám nabídne zboží zdarma, vy musíte odmítnout.",
+    "IRQ": "Irák (Mezopotámie) vynalezl kolo, písmo i pivo. Mají pocit, že civilizace začala u nich. A mají pravdu.",
+    "IRL": "Irský funus je veselejší než svatba. A 'Craic' (zábava/pokec) je smyslem života.",
+    "ISR": "V Izraeli se lidé hádají nahlas a vášnivě, ale za minutu jsou nejlepší přátelé. Přímost (Chutzpah) je ctnost.",
+    "ITA": "V Itálii se cappuccino pije pouze k snídani. Objednat si ho po 11. hodině je turistické faux pas. A těstoviny se nekrájí nožem!",
+    "JAM": "Na Jamajce mají nejvíce kostelů na čtvereční kilometr na světě. A taky nejvíc barů s rumem.",
+    "JPN": "V Japonsku je spánek v práci (Inemuri) znakem toho, že tvrdě pracujete. A smrkat na veřejnosti je neslušné.",
+    "JOR": "Beduínská káva se dolévá, dokud nezatřesete šálkem. Pokud to neuděláte, budou vám dolévat do nekonečna.",
+    "KAZ": "Kazachstán je zemí koní. Koně se tam uctívají, jezdí se na nich, a taky se jedí (klobása Kazy je delikatesa).",
+    "KEN": "Keňané jsou elitní běžci, ale většina jezdí 'Matatu' (dodávkami), které mají šílenou hudbu a ještě šílenější řidiče.",
+    "KIR": "Kiribati je první země, která vítá nový rok. Leží ve všech čtyřech hemisférách.",
+    "PRK": "Severní Korea má vlastní časové pásmo (Pchjongjangský čas) a rok se počítá od narození Kim Ir-sena (rok Čučche).",
+    "KOR": "V Jižní Koreji se věří, že zapnutý větrák v zavřené místnosti vás může zabít (Fan death). A věk se počítá jinak (+1 rok při narození).",
+    "KWT": "Kuvajťané milují parfémy. Spotřeba parfémů na hlavu je tam jedna z nejvyšších na světě.",
+    "KGZ": "Kyrgyzové mají hru 'Kyz Kuumai' (polib dívku), kde muž na koni honí ženu na koni, aby ji políbil. Když ji nechytí, ona může bičovat jeho.",
+    "LAO": "V Laosu je všechno 'sabai sabai' (v pohodě, pomalu). Je to nejvíce bombardovaná země v historii, ale lidé jsou neuvěřitelně zenoví.",
+    "LVA": "Lotyši milují houbaření a květiny. Darovat sudý počet květin je ale pouze na pohřeb.",
+    "LBN": "Libanonci jsou mistři večírků. I v nejtěžších dobách byly kluby v Bejrútu plné. Věří, že život se má užívat každý den.",
+    "LSO": "V Lesothu chodí lidé zabalení v tradičních vlněných dekách jako v kabátech. Je tam zima a často sněží.",
+    "LBR": "Libérie byla založena osvobozenými otroky z USA, takže jejich vlajka vypadá skoro jako americká.",
+    "LBY": "Pít čaj v Libyi je rituál, který má tři kola. První je hořké jako život, druhé sladké jako láska, třetí jemné jako smrt.",
+    "LIE": "Lichtenštejnsko je tak malé, že ho v roce 2007 omylem 'invadovala' švýcarská armáda, když zabloudila v bouřce.",
+    "LTU": "Litva je zemí čápů a basketbalu. Basketbal je tam druhým náboženstvím.",
+    "LUX": "Lucembursko má nejvyšší spotřebu vína na hlavu (někdy se uvádí). A MHD je tam pro všechny zdarma.",
+    "MDG": "Na Madagaskaru se tančí s mrtvými předky (Famadihana). Jednou za čas vykopou kosti, převléknou je a tancují s nimi.",
+    "MWI": "Malawi se přezdívá 'Teplé srdce Afriky' díky neskutečně milým lidem.",
+    "MYS": "V Malajsii se ukazování ukazováčkem považuje za neslušné. Ukazuje se palcem pravé ruky.",
+    "MDV": "Na Maledivách je zakázán alkohol (mimo resorty) a víkend je pátek-sobota.",
+    "MLI": "V Mali se nachází mešita v Djenné, která je celá z hlíny. Každý rok po deštích ji celá vesnice musí vlastnoručně 'přeplácat' novým bahnem.",
+    "MLT": "Malťané milují ohňostroje. Každá vesnice soutěží, kdo udělá větší rámus.",
+    "MHL": "Marshallovy ostrovy jsou atoly. Nejvyšší bod má asi 10 metrů nad mořem.",
+    "MRT": "V Mauretánii je ideálem krásy obezita (u žen). Historicky byly dívky posílány do 'vykrmovacích táborů' (leblouh), aby byly atraktivní.",
+    "MUS": "Dodo (blboun nejapný) žil jen tady. Místní ho snědli. Dnes je národním symbolem.",
+    "MEX": "Mexičané věří, že smrt není konec. Oslava 'Dia de los Muertos' je veselejší než většina našich svateb. A dávají chilli i na ovoce a do piva.",
+    "FSM": "Na ostrově Yap se jako platidlo používají obří kamenné disky (Rai stones). Jsou tak těžké, že se nepřenášejí, jen se řekne, komu patří.",
+    "MDA": "Moldavsko má největší vinný sklep na světě (Milestii Mici), ve kterém se jezdí auty. Ulice se jmenují 'Cabernet', 'Pinot' atd.",
+    "MCO": "Monako je menší než Central Park v New Yorku. Občané Monaka (Monegasques) nesmí hrát v kasinu.",
+    "MNG": "V Mongolsku je více koní než lidí. A když někomu šlápnete na nohu, musíte si okamžitě podat ruku.",
+    "MNE": "Černohorci mají pověst nejlínějších lidí na Balkáně. Mají i 'Desatero lenocha' (např. 'Člověk se rodí unavený a žije, aby si odpočinul').",
+    "MAR": "V Maroku je smlouvání národní sport. Pokud přijmete první cenu, trhovec se urazí, že jste ho připravili o zábavu.",
+    "MOZ": "V Mosambiku se na vlajce nachází samopal Kalašnikov (AK-47). Symbolizuje odhodlání k obraně.",
+    "MMR": "V Barmě si lidé nanášejí na tvář žlutou pastu 'Thanaka' jako ochranu před sluncem a make-up. Muži nosí sukně (Longyi).",
+    "NAM": "Namibie má poušť, která padá přímo do oceánu. Je to jedna z nejméně zalidněných zemí na světě.",
+    "NRU": "Nauru je země s nejvyšším výskytem obezity na světě. A kdysi byla nejbohatší díky ptačímu trusu (fosfáty).",
+    "NPL": "Nepál má jedinou vlajku na světě, která není obdélníková (jsou to dva trojúhelníky). Lidé si tam nikdy nepodávají věci levou rukou.",
+    "NLD": "Nizozemci jsou nejpřímější národ. Co si myslí, to řeknou. A mají víc kol než lidí. Závěsy na oknech? Zbytečnost, nemají co skrývat.",
+    "NZL": "Novozélanďané si říkají 'Kiwis'. Kiwi je pták, ne ovoce (to je kiwifruit). Chodí bosi i do supermarketu.",
+    "NIC": "V Nikaragui se ulice nemají jména. Adresa je 'Od lékárny 2 bloky k jezeru a půl bloku nahoru'.",
+    "NER": "V Nigeru se koná festival, kde muži tančí a líčí se, aby zaujali ženy (Gerewol festival). Mužská soutěž krásy.",
+    "NGA": "Nigérie má 'Nollywood', druhý největší filmový průmysl na světě. Nigerijci jsou známí svou podnikavostí ('African hustle').",
+    "MKD": "Makedonci se dodnes hádají s Řeky o to, čí byl Alexandr Veliký.",
+    "NOR": "Norové milují 'koselig' (útulno). V zimě se zahrabou pod deku u krbu. A hory nechodí 'zdolat', ale 'navštívit'.",
+    "OMN": "Ománci jsou extrémně pohostinní. Káva s kardamomem a datlemi je povinnost všude.",
+    "PAK": "Pákistánci milují zdobení náklaďáků (Jingle Trucks). Řidiči dají do výzdoby víc peněz než do motoru.",
+    "PLW": "Při příletu do Palau musíte do pasu podepsat 'Slib dětem Palau', že se budete chovat ekologicky.",
+    "PAN": "V Panamě můžete vidět východ slunce nad Pacifikem a západ nad Atlantikem (díky zahnutí šíje).",
+    "PNG": "Papua Nová Guinea má přes 800 jazyků. Sousední vesnice si často nerozumí.",
+    "PRY": "V Paraguayi téměř všichni mluví guarani (původní jazyk), nejen španělsky. A pijí studené maté (tereré).",
+    "PER": "V Peru se jí morče (Cuy). Pro nás mazlíček, tam delikatesa na rožni.",
+    "PHL": "Filipínci milují karaoke. Zpívají všude, i falešně, ale s vášní. A Vánoce začínají slavit už v září.",
+    "POL": "Poláci tleskají při přistání letadla. A 'No' v polštině často znamená 'Ano' (No tak, no jasne).",
+    "PRT": "Portugalci jsou melancholici (Saudade). Dají si kávu a hodinu mlčí a dívají se na oceán.",
+    "QAT": "Katarci milují sokolnictví. Sokol může mít i vlastní sedadlo v letadle v business class.",
+    "ROU": "Rumuni věří na průvan (Curent). Průvan je tam považován za příčinu všech nemocí.",
+    "RUS": "V Rusku se nepíská uvnitř domu (nebudou peníze) a nepodává se ruka přes práh. Úsměv na cizince bez důvodu je podezřelý.",
+    "RWA": "Rwanda je nejčistší země Afriky. Igelitové tašky jsou zakázané a zabavují se na letišti. Každou poslední sobotu v měsíci všichni povinně uklízejí (Umuganda).",
+    "KNA": "Lidé z ostrova Svatý Kryštof si říkají 'Kittitians'.",
+    "LCA": "Svatá Lucie je jedinou zemí na světě pojmenovanou po skutečné ženě.",
+    "VCT": "Natáčeli se tu Piráti z Karibiku.",
+    "WSM": "Na Samoe je každý den v podvečer čas na modlitbu (Sa), kdy se zastaví doprava a nesmí se chodit ven.",
+    "SMR": "San Marino je nejstarší republika na světě (od roku 301). A mají více aut než lidí.",
+    "STP": "Říká se tomu 'Čokoládové ostrovy'.",
+    "SAU": "V Saúdské Arábii se donedávna nesměly řídit ženy. Teď už mohou, ale stále milují driftování v poušti.",
+    "SEN": "Senegalci mají 'Teranga' – kulturu extrémní pohostinnosti. I neznámého pozvou na jídlo do společné mísy.",
+    "SRB": "Srbové jsou hluční, vášniví a milují maso. Vegetarián v Srbsku 'trpí'. Rakija se pije jako lék na všechno.",
+    "SYC": "Kokosový ořech Coco de Mer vypadá jako... no, ženské pozadí. Je to národní symbol a razítko do pasu.",
+    "SLE": "Diamanty jsou zde požehnáním i prokletím. Země má jedny z nejhezčích pláží.",
+    "SGP": "V Singapuru je zakázáno žvýkat žvýkačky (prodej je ilegální). Město je sterilně čisté a plné pokut (The Fine City).",
+    "SVK": "Slováci si myslí, že Češi neumí pít. A bryndzové halušky se zapíjejí žinčicí, což je pro cizince gastro-odvaha.",
+    "SVN": "Slovinci jsou jediní, kdo má slovo 'Láska' přímo v názvu země (sLOVEnia). A všichni chodí na Triglav.",
+    "SLB": "Na Šalamounových ostrovech mají lidé gen pro blond vlasy, i když mají tmavou pleť. Není to od Evropanů.",
+    "SOM": "Somálci jsou národ básníků. Poezie je tam důležitější než politika.",
+    "ZAF": "Jihoafrická republika má 11 úředních jazyků. A 'Traffic lights' se tam říká 'Robots'.",
+    "SSD": "Nejmladší stát světa. Lidé jsou extrémně vysocí.",
+    "ESP": "Španělé večeří v 22:00. Párty začíná ve 2 ráno. Siesta už moc neplatí, ale dlouhé obědy ano.",
+    "LKA": "Na Srí Lance se kroutí hlavou ze strany na stranu (Head bobble) na znamení souhlasu.",
+    "SDN": "V Súdánu je více pyramid než v Egyptě. Ale jsou menší a strmější.",
+    "SUR": "V Surinamu stojí synagoga hned vedle mešity a sdílejí parkoviště. Příklad tolerance.",
+    "SWE": "Švédové mají 'Fika' – povinnou pauzu na kávu a buchtu v práci. Neúčastnit se je asociální. A ve frontách stojí s odstupem 2 metry i bez covidu.",
+    "CHE": "Švýcaři jsou posedlí recyklací a tichem. Spláchnout záchod po 22:00 v bytovce může být přestupek proti domovnímu řádu.",
+    "SYR": "Damašek je nejdéle nepřetržitě obydlené město na světě.",
+    "TWN": "Na Tchaj-wanu popelářská auta hrají Beethovena (Pro Elišku), aby lidé věděli, že mají vynést odpadky.",
+    "TJK": "V Tádžikistánu je obočí srostlé uprostřed (unibrow) považováno za znak krásy u žen.",
+    "TZA": "V Tanzanii si lidé podávají ruce velmi dlouho, někdy se drží za ruku celou konverzaci.",
+    "THA": "V Thajsku se nikdy nesmíte dotknout ničí hlavy (je posvátná) a nesmíte ukazovat chodidly na lidi nebo sochu Buddhy.",
+    "TLS": "Východní Timor má legendu, že ostrov je tělo obřího krokodýla.",
+    "TGO": "V Togu jsou trhy s fetiši pro voodoo rituály. Prodávají se tam lebky opic i sušené chameleoni.",
+    "TON": "Na Tonze je krása měřena velikostí. Být velký znamená mít autoritu a postavení.",
+    "TTO": "Trinidad je rodištěm tance Limbo a ocelových bubnů. Karneval je tam smyslem roku.",
+    "TUN": "V Tunisku se točily Hvězdné války (Planeta Tatooine). Místní berbeři dodnes bydlí v podobných podzemních domech.",
+    "TUR": "V Turecku se čaj pije po litrech. Odmítnout čaj je neslušné. A modré oko (Nazar) vás chrání před uřknutím.",
+    "TKM": "V Turkmenistánu je hlavní město z bílého mramoru. Auta musí být čistá a ideálně bílá (černá auta byla zakázána).",
+    "TUV": "Tuvalu prodalo svou internetovou doménu .tv a žije z toho podstatná část ekonomiky.",
+    "UGA": "V Ugandě si ženy klekají, když zdraví starší. Banány (matooke) se jedí ke všemu.",
+    "UKR": "Ukrajinci milují slaninu (salo), jedí ji i s čokoládou. Věnec na hlavě (vinok) je tradiční symbol.",
+    "ARE": "V Dubaji má policie Lamborghini a Ferrari. Aby stíhali piráty silnic (nebo pro image?).",
+    "GBR": "Britové milují fronty (queuing). Předběhnout ve frontě je hrdelní zločin, za který vás 'jen' tiše odsoudí pohledem. O počasí se mluví pořád.",
+    "USA": "Američané jsou extrémně hlasití a přátelští ('How are you?' je pozdrav, ne otázka). V restauraci je dýško 20 % povinnost, jinak číšník nepřežije.",
+    "URY": "Uruguayci chodí s termoskou a kalabasou maté všude. I na rande, i na úřad.",
+    "UZB": "V Uzbekistánu je chléb posvátný. Nikdy se nepokládá obráceně a nesmí se vyhodit.",
+    "VUT": "Na Vanuatu vynalezli bungee jumping (skoky z věží na liánách). Uctívají prince Philipa jako boha.",
+    "VAT": "Vatikán má nejvyšší kriminalitu na hlavu na světě (kvůli kapsářům na turistech a malé populaci).",
+    "VEN": "Venezuela má nejlevnější benzín na světě (často levnější než voda). A ženy jsou posedlé soutěžemi krásy.",
+    "VNM": "Ve Vietnamu se na motorce převeze cokoliv – od ledničky po pětičlennou rodinu. Přecházení silnice je adrenalinový sport (nezastavujte, jen jděte plynule).",
+    "YEM": "Muži v Jemenu nosí za pasem dýku (Jambiya) jako znak mužnosti. Žvýkají rostlinu Qat.",
+    "ZMB": "Řeka Zambezi má boha Nyami Nyami (říční drak).",
+    "ZWE": "V Zimbabwe byla inflace tak velká, že měli bankovku 100 trilionů dolarů. Dnes se jí smějí."
+}
+
+file_path = 'countries.json'
+
+try:
+    with open(file_path, 'r', encoding='utf-8') as f:
+        countries = json.load(f)
+
+    updated_count = 0
+    for country in countries:
+        code = country.get('cca3')
+        if 'culture' not in country:
+            country['culture'] = {}
+            
+        story = facts_db.get(code)
+        
+        # Fallback or Generics based on region if specific story missing
+        if not story:
+            region = country.get('region')
+            if region == "Europe":
+                story = "V této zemi pravděpodobně milují fotbal a debaty o politice u dobrého jídla."
+            elif region == "Asia":
+                story = "Rodina je zde na prvním místě. Jídlo se často sdílí uprostřed stolu."
+            elif region == "Africa":
+                story = "Čas zde plyne pomaleji ('African time'). Spěch je pro cizince."
+            elif region == "Americas":
+                story = "Lidé jsou zde vřelí a otevření. Hudba a tanec jsou součástí každodenního života."
+            else:
+                story = "Místní kultura je plná unikátních tradic, které stojí za to prozkoumat."
+
+        country['culture']['fun_fact'] = story
+        updated_count += 1
+
+    with open(file_path, 'w', encoding='utf-8') as f:
+        json.dump(countries, f, indent=4, ensure_ascii=False)
+
+    print(f"Updated fun facts for {updated_count} countries.")
+
+except Exception as e:
+    print(f"Error: {e}")

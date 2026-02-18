@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Office Country Picker</title>
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Cozy Earth & Nature Palette */
+            --primary: #e67e22; /* Terracotta / Warm Orange */
+            --primary-rgb: 230, 126, 34;
+            --primary-gradient: #d35400; 
+            
+            /* Warm Cream Background */
+            --bg-body: #fdf6e3;  /* Solarized Light Cream */
+            
+            --card-bg: rgba(255, 255, 255, 0.85); /* Warm white glass */
+            --text: #5d4037; /* Deep Brown text */
+            --text-muted: #8d6e63; /* Light Brown */
+            
+            --border: rgba(230, 126, 34, 0.2);
+            
+            --accent: #27ae60; /* Sage/Nature Green */
+            --accent-rgb: 39, 174, 96;
+            
+            --shadow: 0 10px 40px -10px rgba(93, 64, 55, 0.15);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.6);
+            --wheel-border: #8d6e63;
+            --radius-lg: 1.5rem;
+            --radius-md: 1rem;
+        }
+        
+        .dark-mode {
+            /* Deep Forest Night */
+            --bg-body: #2c3e50; /* Deep Blue-Green Grey */
+            
+            --card-bg: rgba(34, 49, 63, 0.85);
+            --primary: #f1c40f; /* Muted Gold */
+            --primary-rgb: 241, 196, 15;
+            --primary-gradient: #f39c12;
+            
+            --text: #ecf0f1; /* Soft White */
+            --text-muted: #bdc3c7;
+            
+            --accent: #e74c3c; /* Soft Red */
+            --accent-rgb: 231, 76, 60;
+            
+            --border: rgba(255, 255, 255, 0.1);
+            --glass-border: 1px solid rgba(255, 255, 255, 0.05);
+            --shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.4);
+            --wheel-border: #ecf0f1;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-body);
+            color: var(--text);
+            min-height: 100vh;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .dark-mode body {
+            background: var(--bg-body);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            padding: 1rem 2rem;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: var(--radius-lg);
+            border: var(--glass-border);
+            box-shadow: var(--shadow);
+        }
+
+        h1 { 
+            font-weight: 900; 
+            font-size: 2.5rem; 
+            letter-spacing: -0.04em;
+            color: var(--primary);
+            text-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .controls-top { display: flex; gap: 1rem; align-items: center; }
+
+        /* Layout */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .main-grid { grid-template-columns: 480px 1fr; }
+        }
+
+        /* Wheel Section */
+        .wheel-container {
+            position: sticky;
+            top: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow);
+            border: var(--glass-border);
+            height: fit-content;
+        }
+
+        #wheel-canvas {
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+            border: 12px solid var(--wheel-border);
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+            margin-bottom: 2rem;
+            transition: transform 4s cubic-bezier(0.15, 0, 0.15, 1);
+        }
+
+        .wheel-pointer {
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 40px solid var(--accent);
+            margin-bottom: -25px;
+            z-index: 10;
+            filter: drop-shadow(0 4px 6px rgba(0,0,0,0.3));
+        }
+
+        /* Buttons & Inputs */
+        .btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: var(--radius-md);
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 4px 12px rgba(230, 126, 34, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .btn:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 8px 20px rgba(230, 126, 34, 0.4); 
+            filter: brightness(1.1);
+        }
+        .btn:active { transform: translateY(0); }
+        .btn:disabled { 
+            background: var(--text-muted); 
+            cursor: not-allowed; 
+            transform: none; 
+            box-shadow: none; 
+        }
+        
+        .btn-secondary { 
+            background: transparent; 
+            border: 2px solid var(--text-muted);
+            color: var(--text);
+            box-shadow: none;
+        }
+        .btn-secondary:hover { 
+            background: var(--text-muted); 
+            color: white; 
+            box-shadow: none;
+        }
+
+        .form-group { width: 100%; margin-bottom: 1rem; }
+        label { display: block; margin-bottom: 0.5rem; font-size: 0.875rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); }
+        input[type="text"] {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border);
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            font-size: 1rem;
+            backdrop-filter: blur(5px);
+            transition: border-color 0.2s;
+        }
+        input[type="text"]:focus {
+            outline: none;
+            border-color: var(--primary);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .toggle-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+            justify-content: center;
+        }
+        
+        .toggle-group label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+            text-transform: none;
+            color: var(--text);
+        }
+
+        /* Result Panel */
+        .result-panel {
+            display: none; /* Shown after spin */
+            animation: slideUpElastic 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+            padding-bottom: 4rem;
+        }
+
+        @keyframes slideUpElastic { 
+            0% { opacity: 0; transform: translateY(60px) scale(0.95); } 
+            60% { opacity: 1; transform: translateY(-5px) scale(1.01); } 
+            100% { transform: translateY(0) scale(1); } 
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border-radius: var(--radius-lg);
+            padding: 2rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            border: var(--glass-border);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.15);
+            border-color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Decorative card accent - pulsing on hover */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 4px; height: 100%;
+            background: var(--primary);
+            opacity: 0.8;
+            transition: width 0.3s ease, opacity 0.3s ease;
+        }
+        
+        .card:hover::before {
+            width: 6px;
+            opacity: 1;
+        }
+
+        .card-header-main {
+            padding: 3rem 2rem;
+            text-align: center;
+            background: rgba(99, 102, 241, 0.05);
+            border-bottom: 1px solid var(--border);
+            margin: -2rem -2rem 2rem -2rem;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--primary);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .info-grid .card {
+            margin-bottom: 0;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .info-grid .card::before {
+             width: 100%; height: 4px;
+        }
+
+        .info-item {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-top: 0.5rem;
+            display: block;
+        }
+
+        .info-label { 
+            font-weight: 600; 
+            color: var(--text-muted); 
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .recipe-list { list-style: none; }
+        .recipe-item {
+            margin-bottom: 1rem;
+            padding: 1rem;
+            background: rgba(0,0,0,0.03);
+            border-radius: var(--radius-md);
+        }
+        .recipe-name { 
+            font-weight: 700; 
+            display: block; 
+            color: var(--primary);
+            margin-bottom: 0.2rem;
+        }
+
+        .tag-list { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+        .tag {
+            background: rgba(255, 255, 255, 0.6);
+            padding: 0.5rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 0.95rem;
+            border: 1px solid var(--border);
+            font-weight: 600;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
+            cursor: default;
+        }
+
+        .tag:hover {
+            transform: translateY(-2px) scale(1.05);
+            background: #fff;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            color: var(--primary);
+            border-color: var(--primary);
+        }
+
+        /* Dark Mode Switch */
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 52px;
+            height: 28px;
+        }
+        .switch input { opacity: 0; width: 0; height: 0; }
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #cbd5e1;
+            transition: .4s;
+            border-radius: 34px;
+        }
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 20px; width: 20px;
+            left: 4px; bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        input:checked + .slider { background-color: var(--primary); }
+        input:checked + .slider:before { transform: translateX(24px); }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+            justify-content: center;
+        }
+
+        /* Loading Spinner */
+        .loader {
+            position: relative;
+            width: 80px;
+            height: 80px;
+            margin: 40px auto;
+        }
+        
+        .loader::before, .loader::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            border-top-color: var(--primary);
+            animation: spin 1.5s cubic-bezier(0.68, -0.55, 0.27, 1.55) infinite;
+        }
+
+        .loader::after {
+            width: 60%; height: 60%;
+            top: 20%; left: 20%;
+            border-top-color: var(--accent);
+            animation-duration: 1s;
+            animation-direction: reverse;
+        }
+
+        @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .suggestions-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 0 0 var(--radius-md) var(--radius-md);
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            z-index: 1000;
+            max-height: 200px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        .dark-mode .suggestions-dropdown {
+            background: #1e293b;
+            border-color: rgba(255,255,255,0.1);
+        }
+        
+        .suggestion-item {
+            padding: 0.75rem 1rem;
+            cursor: pointer;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+            transition: background 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: var(--text);
+            font-size: 0.95rem;
+        }
+
+        .suggestion-item small {
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            background: rgba(0,0,0,0.05);
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .suggestion-item:last-child {
+            border-bottom: none;
+        }
+
+        .suggestion-item:hover, .suggestion-item.active {
+            background-color: rgba(230, 126, 34, 0.08); /* Primary color low opacity */
+        }
+
+        /* Summary Button Styling */
+        .summary-btn {
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.5);
+            border-radius: var(--radius-md);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        
+        .summary-btn:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateX(2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+
+        .dark-mode .summary-btn {
+            color: var(--bg-body) !important;
+        }
+
+        details[open] .summary-btn {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            background: var(--primary);
+            color: white !important;
+            margin-bottom: 0;
+        }
+
+        details[open] .summary-btn::after {
+            transform: rotate(180deg);
+        }
+        
+        details .summary-btn::after {
+            content: '▼';
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+
+        /* Accordion Content Animation */
+        details[open] div {
+            animation: slideDown 0.4s ease-out;
+            background: rgba(255, 255, 255, 0.3);
+            padding: 1.5rem;
+            border-bottom-left-radius: var(--radius-md);
+            border-bottom-right-radius: var(--radius-md);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-top: none;
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Pulse Animation for Big Button */
+        @keyframes pulse-btn {
+            0% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0.7); }
+            70% { box-shadow: 0 0 0 4px rgba(230, 126, 34, 0); } /* Adjusted spread for elegance */
+            100% { box-shadow: 0 0 0 0 rgba(230, 126, 34, 0); }
+        }
+
+        #spin-btn {
+            animation: pulse-btn 2s infinite;
+        }
+
+        #spin-btn:hover {
+            animation: none;
+        }
+
+        /* Staggered Card Entrance */
+        .result-panel.active .card {
+            animation: cardEntrance 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+        }
+
+        @keyframes cardEntrance {
+            from { opacity: 0; transform: translateY(30px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        .result-panel.active .card:nth-child(1) { animation-delay: 0.1s; }
+        .result-panel.active .card:nth-child(2) { animation-delay: 0.2s; }
+        .result-panel.active .card:nth-child(3) { animation-delay: 0.3s; }
+        .result-panel.active .card:nth-child(4) { animation-delay: 0.4s; }
+        .result-panel.active .card:nth-child(5) { animation-delay: 0.5s; }
+        .result-panel.active .card:nth-child(6) { animation-delay: 0.6s; }
+        .result-panel.active .card:nth-child(7) { animation-delay: 0.7s; }
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>🌍 Country Picker</h1>
+        <div class="controls-top">
+            <span style="font-size: 0.8rem; font-weight: 600;">DARK MODE</span>
+            <label class="switch">
+                <input type="checkbox" id="dark-mode-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <div class="main-grid">
+        <!-- Left Column: Digital Roulette & Config -->
+        <div class="wheel-section">
+            <div class="wheel-container">
+                
+                <!-- Digital Roulette Display -->
+                <div id="roulette-box" style="
+                    width: 100%; 
+                    height: 200px; 
+                    background: rgba(255, 255, 255, 0.1); 
+                    backdrop-filter: blur(10px);
+                    border: 2px solid rgba(255, 255, 255, 0.2);
+                    border-radius: var(--radius-lg);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-bottom: 2rem;
+                    box-shadow: inset 0 0 60px rgba(230, 126, 34, 0.1), 0 10px 30px rgba(0,0,0,0.1);
+                    overflow: hidden;
+                    position: relative;
+                ">
+                    <div id="roulette-text" style="
+                        font-size: 2.5rem; 
+                        font-weight: 900; 
+                        text-align: center;
+                        color: var(--primary);
+                        text-transform: uppercase;
+                        letter-spacing: 0.05em;
+                        padding: 1rem;
+                    ">🌍 PŘIPRAVENO</div>
+                    
+                    <!-- Decorative scanning line -->
+                    <div id="scan-line" style="
+                        position: absolute;
+                        top: 0; left: 0; right: 0; height: 4px;
+                        background: rgba(230, 126, 34, 0.5);
+                        box-shadow: 0 0 10px var(--primary);
+                        display: none;
+                    "></div>
+                </div>
+                
+                <button id="spin-btn" class="btn" style="width: 100%; justify-content: center; font-size: 1.4rem; padding: 1.5rem;">
+                    🎲 LOSOVAT
+                </button>
+
+
+
+                <div class="form-group" style="margin-top: 1.5rem;">
+                    <label for="exclude-input">Vyřadit konkrétní země (oddělené čárkou):</label>
+                    <input type="text" id="exclude-input" placeholder="např. Russia, USA" style="text-align: center;">
+                </div>
+
+                <div class="form-group" style="margin-top: 1rem;">
+                    <label>Vyřadit celý kontinent:</label>
+                    <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; background: rgba(0,0,0,0.03); padding: 1rem; border-radius: var(--radius-md);">
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 0.3rem;"><input type="checkbox" name="exclude-region" value="Europe" style="accent-color: var(--primary);"> 🇪🇺 Evropa</label>
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 0.3rem;"><input type="checkbox" name="exclude-region" value="Asia" style="accent-color: var(--primary);"> ⛩️ Asie</label>
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 0.3rem;"><input type="checkbox" name="exclude-region" value="Africa" style="accent-color: var(--primary);"> 🦁 Afrika</label>
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 0.3rem;"><input type="checkbox" name="exclude-region" value="Americas" style="accent-color: var(--primary);"> 🌎 Amerika</label>
+                        <label style="cursor: pointer; display: flex; align-items: center; gap: 0.3rem;"><input type="checkbox" name="exclude-region" value="Oceania" style="accent-color: var(--primary);"> 🏝️ Oceánie</label>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 1.5rem; border-top: 1px solid var(--border); padding-top: 1.5rem;">
+                    <label for="search-input">Hledat konkrétní zemi:</label>
+                    <div style="display: flex; gap: 0.5rem; position: relative;" id="search-container">
+                        <input type="text" id="search-input" placeholder="Zadejte název země..." style="text-align: left; flex: 1;">
+                        <button id="search-btn" class="btn" style="padding: 0.8rem 1.5rem; font-size: 1rem;">🔍</button>
+                        <div id="search-suggestions" class="suggestions-dropdown"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Results -->
+        <div id="loading" style="display: none; text-align: center; padding: 4rem;">
+            <div class="loader"></div>
+            <p style="font-weight: 600; color: var(--text-muted); font-size: 1.1rem; animation: pulse 1.5s infinite;">🌍 Prohledávám mapu světa...</p>
+            <style>@keyframes pulse { 0% { opacity: 0.6; } 50% { opacity: 1; } 100% { opacity: 0.6; } }</style>
+        </div>
+
+        <div id="result-panel" class="result-panel">
+            <div class="card">
+                <div class="card-header-main">
+                    <div id="country-flag" style="font-size: 5rem; margin-bottom: 1rem; filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));"></div>
+                    <div>
+                        <h2 id="country-name" style="font-size: 2.5rem; font-weight: 900; letter-spacing: -0.03em; margin-bottom: 0.5rem; color: var(--primary);">Země</h2>
+                        <p id="country-region" style="font-size: 1.1rem; color: var(--text-muted); font-weight: 500;"></p>
+                    </div>
+                </div>
+
+                <div class="info-grid">
+                    <div class="card">
+                        <span class="info-label">Hlavní město</span>
+                        <span id="info-capital" class="info-item">-</span>
+                    </div>
+                    <div class="card">
+                        <span class="info-label">Populace</span>
+                        <span id="info-pop" class="info-item">-</span>
+                    </div>
+                    <div class="card">
+                        <span class="info-label">Jazyky</span>
+                        <span id="info-lang" class="info-item">-</span>
+                    </div>
+                    <div class="card">
+                        <span class="info-label">Měna</span>
+                        <span id="info-currency" class="info-item">-</span>
+                    </div>
+                </div>
+
+                <div class="card" id="palette-section" style="display:none; margin-bottom: 2rem;">
+                    <span class="info-label" style="display:block; text-align:center; margin-bottom:1rem;">Barevná paleta</span>
+                    <div id="palette-container" style="display:flex; gap:1rem; justify-content: center; flex-wrap: wrap;"></div>
+                </div>
+
+                <div class="card-title">🤝 Zvyky & Společenské tipy</div>
+                <p id="party-etiquette" style="font-size: 1.1rem; line-height: 1.7;"></p>
+            </div>
+
+            <div class="card">
+                <div class="card-title">🍲 Jídlo & Občerstvení</div>
+                <p id="food-focus" style="margin-bottom: 0.5rem; font-style: italic; color: var(--text-muted);"></p>
+                
+                <div id="food-tradition-box" style="margin-bottom: 1.5rem; background: rgba(var(--primary-rgb), 0.05); padding: 1rem; border-radius: var(--radius-md); border-left: 4px solid var(--primary);">
+                    <p style="margin: 0; font-size: 0.95rem;">💡 <strong>Tradice:</strong> <span id="food-tradition-text"></span></p>
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Typické pokrmy (rozklikněte pro recept):</strong>
+                    <div id="food-typical" style="display: flex; flex-direction: column; gap: 0.5rem;"></div>
+                </div>
+                <div id="food-party-container" style="background: rgba(39, 174, 96, 0.1); padding: 1rem; border-radius: var(--radius-md); border: 1px dashed var(--accent); display: none;">
+                    <p><strong>💡 Party tip:</strong> <span id="food-party" style="font-weight: 600;"></span></p>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-title" id="drinks-title">🍹 Alkohol & Nealko</div>
+                <p style="margin-bottom: 1rem;"><strong>🍹 Základní chutě:</strong> <span id="drinks-base" style="color: var(--text-muted);"></span></p>
+                <div id="drinks-content" style="background: rgba(255,255,255,0.4); border-radius: var(--radius-md); padding: 1.5rem;">
+                    <ul class="recipe-list" id="drink-recipes"></ul>
+                </div>
+            </div>
+
+            <div class="info-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="card" style="padding: 2rem;">
+                    <div class="card-title">👕 Oblečení</div>
+                    <p id="outfit-tips" style="font-size: 0.95rem; line-height: 1.6; color: var(--text-muted); margin-bottom: 0.5rem;"></p>
+                    <p id="clothing-specific" style="margin-top: 0.5rem; color: var(--text); background: rgba(0,0,0,0.03); padding: 0.5rem; border-radius: var(--radius-md); font-weight: 500;">
+                        🧢 <strong>Tradiční prvek:</strong> <span id="clothing-item"></span>
+                    </p>
+                </div>
+
+                <div class="card" style="padding: 2rem;">
+                    <div class="card-title">🎶 Hudba & Vibe</div>
+                    <p style="margin-bottom: 1rem;"><strong>🎸 Nástroj:</strong> <span id="music-instrument" style="font-weight: 600;"></span></p>
+                    
+                    <strong style="display:block; margin-bottom:0.8rem; font-size: 0.95rem; text-transform: uppercase; color: var(--text-muted);">🎤 Interpreti & Inspirace:</strong>
+                    <div class="tag-list" id="music-tags"></div>
+                </div>
+            </div>
+
+            <div class="card" id="decor-section">
+                <div class="card-title">✨ Dekorace (Office-friendly)</div>
+                <div class="tag-list" id="decor-tags"></div>
+            </div>
+
+            <div class="card" id="fun-fact-section" style="display:none; background: var(--bg-body); border: 2px dashed var(--accent);">
+                <div class="card-title">🧐 Věděli jste, že...? (Stereotypy & Fakta)</div>
+                <p id="fun-fact-text" style="font-size: 1.05rem; line-height: 1.6; font-style: italic; color: var(--text);"></p>
+            </div>
+
+            <div class="action-buttons">
+                <button id="copy-shopping" class="btn btn-secondary">📋 Nákupní seznam</button>
+                <button id="share-slack" class="btn btn-secondary">💬 Sdílet na Slack</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+/**
+ * APP STATE & DATA
+ */
+let countries = [];
+let drawnCountries = JSON.parse(localStorage.getItem('drawnCountries') || '[]');
+const API_URL = 'countries.json'; // Local file
+
+const rouletteText = document.getElementById('roulette-text');
+let spinBtn = document.getElementById('spin-btn');
+const resultPanel = document.getElementById('result-panel');
+const loadingEl = document.getElementById('loading');
+const scanLine = document.getElementById('scan-line');
+
+// Dataset pro generování (velmi stručný, zbytek generován logikou)
+const cultureData = {
+    "Europe": {
+        etiquette: "Zdraví se pevným stiskem ruky. V kanceláři se oceňuje dochvilnost, ale na party se toleruje mírné zpoždění.",
+        decor: ["Světelné řetězy", "Minimalistický design", "Regionální květiny", "Lněné textilie", "Dřevěné doplňky"],
+        music: "Moderní pop, indie nebo lokální lidová hudba v moderním hávu."
+    },
+    "Asia": {
+        etiquette: "Respekt k hierarchii a starším. Často se při pozdravu mírně uklání. Sundávání bot uvnitř je běžné.",
+        decor: ["Papírové lampiony", "Bambusové prvky", "Hedvábné látky", "Origami", "Kaligrafické nápisy"],
+        music: "K-Pop, J-Pop nebo klidná instrumentální hudba s tradičními nástroji."
+    },
+    "Africa": {
+        etiquette: "Velký důraz na komunitu a sdílení jídla. Pozdravy jsou vřelé a mohou trvat déle.",
+        decor: ["Geometrické vzory", "Proutěné košíky", "Hliněné nádoby", "Syté barvy země (oranžová, okrová)", "Dřevěné masky"],
+        music: "Afrobeats, Highlife, nebo tradiční perkuse/bubny."
+    },
+    "Americas": {
+        etiquette: "Velmi neformální a přátelské prostředí. Osobní prostor je menší než v Evropě.",
+        decor: ["Pestrobarevné girlandy", "Rustikální dřevo", "Kaktusy nebo tropické listy", "Neonové nápisy", "Městský styl"],
+        music: "Latino, Reggaeton, Jazz, Rock nebo Country."
+    },
+    "Oceania": {
+        etiquette: "Uvolněná atmosféra, 'No worries' přístup. Velký vztah k přírodě a moři.",
+        decor: ["Mušle", "Písek v nádobách", "Surfové prvky", "Zelené listy kapradin", "Modré odstíny"],
+        music: "Acoustic, Reggae vibes nebo moderní Pop."
+    }
+};
+
+/**
+ * INITIALIZATION
+ */
+async function init() {
+    // Load excludes from storage
+    document.getElementById('exclude-input').value = localStorage.getItem('excludeList') || '';
+    
+    // Dark mode logic
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    if (localStorage.getItem('darkMode') === 'true') {
+        document.body.classList.add('dark-mode');
+        darkModeToggle.checked = true;
+    }
+    darkModeToggle.addEventListener('change', (e) => {
+        document.body.classList.toggle('dark-mode', e.target.checked);
+        localStorage.setItem('darkMode', e.target.checked);
+        drawWheel();
+    });
+
+    try {
+        loadingEl.style.display = 'block';
+        console.log("Loading countries from local file...");
+        
+        try {
+            const res = await fetch(API_URL);
+            if (!res.ok) throw new Error(`HTTP error! status: ${res.status}`);
+            countries = await res.json();
+            console.log("Loaded " + countries.length + " countries.");
+        } catch(e) {
+             throw e; // rethrow to catch block
+        }
+        
+        rouletteText.textContent = "🌍 PŘIPRAVENO";
+    } catch (err) {
+        console.error("Error loading country data:", err);
+        // Fallback
+        countries = [
+            { "name": { "common": "Česká republika" }, "cca3": "CZE", "region": "Europe", "subregion": "Central Europe", "population": 10700000, "flag": "🇨🇿", "currencies": { "CZK": { "name": "Koruna", "symbol": "Kč" } } },
+            { "name": { "common": "Japonsko" }, "cca3": "JPN", "region": "Asia", "subregion": "Eastern Asia", "flag": "🇯🇵" },
+            { "name": { "common": "USA" }, "cca3": "USA", "region": "Americas", "subregion": "North America", "flag": "🇺🇸" }
+        ];
+        rouletteText.textContent = "⚠️ ZÁLOŽNÍ DATA";
+    } finally {
+        loadingEl.style.display = 'none';
+        if(spinBtn) spinBtn.disabled = false;
+    }
+}
+
+/**
+ * FILTER LOGIC
+ */
+function getFilteredCountries() {
+    // 1. Existing exclude logic
+    const excludes = document.getElementById('exclude-input').value
+        .split(',')
+        .map(s => s.trim().toLowerCase())
+        .filter(s => s !== "");
+
+    // 2. New region exclude logic
+    const excludedRegions = Array.from(document.querySelectorAll('input[name="exclude-region"]:checked'))
+        .map(cb => cb.value);
+
+    let filtered = countries.filter(c => {
+        const name = c.name.common.toLowerCase();
+        // Check if country name is excluded
+        const isExcludedByName = excludes.includes(name);
+        // Check if region is excluded
+        const isExcludedByRegion = c.region && excludedRegions.includes(c.region);
+        
+        return !isExcludedByName && !isExcludedByRegion;
+    });
+
+    return filtered;
+}
+
+/**
+ * DIGITAL ROULETTE LOGIC
+ */
+function startRoulette() {
+    console.log("Starting roulette...");
+    
+    // 1. Get Candidates
+    const active = getFilteredCountries();
+    if (!active || active.length === 0) {
+        alert("Žádné země k dispozici. Zkontrolujte filtry.");
+        return;
+    }
+
+    // 2. Prep UI
+    spinBtn.disabled = true;
+    spinBtn.textContent = '🎲 LOSUJI...';
+    resultPanel.style.display = 'none';
+    rouletteText.style.fontSize = '2.5rem'; // Reset font size
+    
+    // Visual effect
+    if(scanLine) {
+        scanLine.style.display = 'block';
+        scanLine.style.animation = 'scan 0.5s linear infinite alternate';
+    }
+    
+    // Save excludes
+    const excludeInput = document.getElementById('exclude-input');
+    if(excludeInput) localStorage.setItem('excludeList', excludeInput.value);
+
+    // 3. Animation Variables
+    let speed = 50; // Initial delay in ms (fast)
+    let counter = 0;
+    const maxSteps = 30 + Math.floor(Math.random() * 15); // Random duration
+    
+    // The Winner
+    const winner = active[Math.floor(Math.random() * active.length)];
+
+    // Recursive function for variable speed
+    function step() {
+        // Pick a random country to show briefly
+        const randomCountry = active[Math.floor(Math.random() * active.length)];
+        rouletteText.textContent = randomCountry.name.common.toUpperCase();
+        rouletteText.style.color = counter % 2 === 0 ? 'var(--primary)' : 'var(--accent)';
+        
+        counter++;
+
+        // Animation logic
+        if (counter < maxSteps) {
+            // Slow down curve
+            if (counter > maxSteps * 0.7) speed += 10;
+            if (counter > maxSteps * 0.85) speed += 30;
+            if (counter > maxSteps * 0.95) speed += 80;
+            
+            setTimeout(step, speed);
+        } else {
+            // FINISH
+            finishRoulette(winner);
+        }
+    }
+
+    // Start!
+    step();
+}
+
+function finishRoulette(winner) {
+    // Show Winner
+    const text = winner.name.common.toUpperCase();
+    rouletteText.textContent = text;
+    rouletteText.style.color = '#10b981'; // Green
+    
+    // Auto-resize text to fit
+    adjustFontSize(rouletteText, document.getElementById('roulette-box'));
+
+    if(scanLine) scanLine.style.display = 'none';
+    spinBtn.disabled = false;
+    spinBtn.textContent = '🎲 NOVÝ LOS';
+
+    // Show details
+    setTimeout(() => {
+        try {
+            displayCountry(winner);
+        } catch (e) {
+            console.error(e);
+            alert("Chyba zobrazení: " + e.message);
+        }
+    }, 500); 
+}
+
+function adjustFontSize(textEl, containerEl) {
+    if(!textEl || !containerEl) return;
+    
+    // Reset defaults (remove word-break from previous attempts if needed or set it correctly)
+    textEl.style.wordBreak = 'normal'; 
+    textEl.style.overflowWrap = 'normal';
+    textEl.style.width = 'auto';
+    textEl.style.textAlign = 'center';
+
+    // Start with max size
+    let size = 2.5; // matching max size defined in CSS
+    textEl.style.fontSize = size + 'rem';
+    
+    // We want to fit within container with some padding
+    // Container has padding itself (e.g. 1rem = 16px).
+    const maxHeight = containerEl.clientHeight - 30; // 15px top/bottom buffer
+    const maxWidth = containerEl.clientWidth - 30;   // 15px left/right buffer
+    
+    // First check: does it fit on one line?
+    if (textEl.scrollWidth <= maxWidth && textEl.scrollHeight <= maxHeight) {
+        return; // Fits perfectly
+    }
+    
+    // If not, enable wrapping
+    textEl.style.wordBreak = 'break-word';
+    textEl.style.overflowWrap = 'break-word';
+    textEl.style.width = '100%';
+    
+    // Reduce size until it fits vertically (height constraint is usually the problem with wrapping)
+    let i = 0;
+    while ( 
+        (textEl.scrollHeight > maxHeight) 
+        && size > 0.8 // minimum readable size
+        && i < 50
+    ) {
+        size -= 0.1; // slower reduction
+        textEl.style.fontSize = size + 'rem';
+        i++;
+    }
+}
+
+// Event Listeners
+if(spinBtn) {
+    const oldBtn = spinBtn;
+    const newBtn = oldBtn.cloneNode(true);
+    oldBtn.parentNode.replaceChild(newBtn, oldBtn);
+    
+    // Update global reference now that it is 'let'
+    spinBtn = newBtn;
+    
+    // Attach Listeners
+    spinBtn.addEventListener('click', startRoulette);
+    spinBtn.addEventListener('touchend', (e) => {
+        e.preventDefault();
+        startRoulette();
+    });
+} else {
+    console.error("Spin button missing!");
+}
+
+// Search Logic
+const searchBtn = document.getElementById('search-btn');
+const searchInput = document.getElementById('search-input');
+
+function performSearch() {
+    const query = searchInput.value.trim().toLowerCase();
+    if (!query) return;
+
+    // Search by common name, official name, or cca3 code
+    const found = countries.find(c => 
+        c.name.common.toLowerCase().includes(query) || 
+        (c.name.official && c.name.official.toLowerCase().includes(query)) ||
+        (c.cca3 && c.cca3.toLowerCase() === query)
+    );
+
+    if (found) {
+        displayCountry(found);
+        // Reset roulette text if manual search
+        rouletteText.textContent = found.name.common.toUpperCase();
+        rouletteText.style.color = 'var(--primary)';
+        adjustFontSize(rouletteText, document.getElementById('roulette-box'));
+        
+        if(scanLine) scanLine.style.display = 'none';
+        
+        // Ensure result panel is visible
+        resultPanel.style.display = 'block';
+        resultPanel.scrollIntoView({ behavior: 'smooth' });
+    } else {
+        alert("Země nenalezena! Zkuste jiný název (např. 'Japan', 'France', 'Brazil').");
+    }
+}
+
+if(searchBtn && searchInput) {
+    searchBtn.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') performSearch();
+    });
+
+    // AUTOCOMPLETE LOGIC
+    const suggestionsBox = document.getElementById('search-suggestions');
+
+    searchInput.addEventListener('input', (e) => {
+        const val = e.target.value.trim().toLowerCase();
+        if (val.length < 1) {
+            suggestionsBox.innerHTML = '';
+            suggestionsBox.style.display = 'none';
+            return;
+        }
+
+        const matches = countries.filter(c => 
+            c.name.common.toLowerCase().includes(val) || 
+            (c.name.official && c.name.official.toLowerCase().includes(val)) ||
+            (c.cca3 && c.cca3.toLowerCase().includes(val))
+        ).slice(0, 8); // Limit to 8 results
+
+        if (matches.length > 0) {
+            suggestionsBox.innerHTML = matches.map(c => `
+                <div class="suggestion-item" onclick="selectSuggestion('${c.cca3}')">
+                    <span style="display:flex; align-items:center; gap:0.5rem;">
+                        <span>${c.flag || '📍'}</span>
+                        <strong>${c.name.common}</strong>
+                    </span>
+                    <small>${c.region}</small>
+                </div>
+            `).join('');
+            suggestionsBox.style.display = 'block';
+        } else {
+            suggestionsBox.innerHTML = '<div class="suggestion-item" style="cursor:default; color:var(--text-muted);">Žádné výsledky</div>';
+            suggestionsBox.style.display = 'block';
+        }
+    });
+
+    // Hide suggestions when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!document.getElementById('search-container').contains(e.target)) {
+            suggestionsBox.style.display = 'none';
+        }
+    });
+}
+
+// Helper for selecting suggestion
+window.selectSuggestion = function(cca3) {
+    const country = countries.find(c => c.cca3 === cca3);
+    if (country) {
+        document.getElementById('search-input').value = country.name.common;
+        document.getElementById('search-suggestions').style.display = 'none';
+        
+        displayCountry(country);
+        
+        // Update UI state for "Manual Selection"
+        const rouletteText = document.getElementById('roulette-text');
+        const scanLine = document.getElementById('scan-line');
+        const resultPanel = document.getElementById('result-panel');
+        
+        rouletteText.textContent = country.name.common.toUpperCase();
+        rouletteText.style.color = 'var(--primary)';
+        adjustFontSize(rouletteText, document.getElementById('roulette-box'));
+
+        if(scanLine) scanLine.style.display = 'none';
+        
+        resultPanel.style.display = 'block';
+        resultPanel.scrollIntoView({ behavior: 'smooth' });
+    }
+};
+
+// Add CSS keyframes
+const styleSheet = document.createElement("style");
+styleSheet.innerText = `
+@keyframes scan {
+    from { top: 0; }
+    to { top: 100%; }
+}`;
+document.head.appendChild(styleSheet); /* End of Logic */
+
+function displayCountry(country) {
+    resultPanel.style.display = 'block';
+    
+    // Reflow animation for cards
+    resultPanel.classList.remove('active');
+    void resultPanel.offsetWidth; // Trigger reflow
+    resultPanel.classList.add('active');
+
+    resultPanel.scrollIntoView({ behavior: 'smooth' });
+
+    // Basic Info
+    document.getElementById('country-name').textContent = country.name.common;
+    document.getElementById('country-flag').textContent = country.flag || '📍';
+    document.getElementById('country-region').textContent = `${country.region} / ${country.subregion || ''}`;
+    document.getElementById('info-capital').textContent = country.capital?.[0] || 'N/A';
+    document.getElementById('info-pop').textContent = country.population.toLocaleString();
+    document.getElementById('info-lang').textContent = Object.values(country.languages || {}).join(', ');
+    const currency = Object.values(country.currencies || {})[0];
+    document.getElementById('info-currency').textContent = currency ? `${currency.name} (${currency.symbol})` : 'N/A';
+
+    // Generování party dat
+    const region = country.region;
+    const isNoAlcohol = false; // Checkbox removed
+    const gastro = country.gastronomy || {};
+
+    // Culture Data Logic
+    let etiquette, decorList, musicVibe, festivals;
+    
+    if (country.culture) {
+        etiquette = country.culture.etiquette;
+        
+        // Zpracování dekorací (nové pole 'decoration' nebo staré 'decor')
+        let rawDecor = country.culture.decoration || country.culture.decor;
+        if (typeof rawDecor === 'string') {
+            decorList = rawDecor.split(',').map(s => s.trim());
+        } else if (Array.isArray(rawDecor)) {
+            decorList = rawDecor;
+        } else {
+            decorList = [];
+        }
+
+        musicVibe = country.culture.music;
+        festivals = country.culture.festivals;
+    } else {
+        // Fallback pro stará data
+        const data = cultureData[region] || cultureData["Europe"];
+        etiquette = data.etiquette;
+        decorList = data.decor || [];
+        musicVibe = data.music;
+        festivals = "";
+    }
+
+    // Fun Fact Logic
+    const funFact = (country.culture && country.culture.fun_fact) ? country.culture.fun_fact : null;
+    const funFactSection = document.getElementById('fun-fact-section');
+    
+    // We already moved the element for rendering above "Action Buttons", 
+    // but the logic was inserted above 'party-etiquette' in code.
+    // The "funFactSection" variable needs to reference the element we just created in HTML.
+    
+    if (funFactSection) {
+        if (funFact) {
+            funFactSection.style.display = 'block';
+            document.getElementById('fun-fact-text').textContent = funFact;
+        } else {
+            funFactSection.style.display = 'none';
+        }
+    }
+
+    document.getElementById('party-etiquette').textContent = etiquette;
+    if (festivals) {
+        document.getElementById('party-etiquette').textContent += ` 🎊 Sváteční inspirace: ${festivals}`;
+    }
+    
+    // Food & Drink Logic
+    const foodTradition = gastro.tradition || "Zapojte kolegy do přípravy – společné jídlo chutná nejlépe.";
+    document.getElementById('food-tradition-text').textContent = foodTradition;
+
+    const dishesContainer = document.getElementById('food-typical');
+    document.getElementById('food-focus').textContent = gastro.focus || "";
+
+    if (gastro.dishes && Array.isArray(gastro.dishes)) {
+        if (typeof gastro.dishes[0] === 'string') {
+             dishesContainer.textContent = gastro.dishes.join(', ');
+        } else {
+             dishesContainer.innerHTML = gastro.dishes.map(d => `
+                <details style="margin-bottom: 0.5rem; background: rgba(255,255,255,0.3); padding: 0.5rem; border-radius: var(--radius-md);">
+                    <summary class="summary-btn" style="font-weight: 700; cursor: pointer; color: var(--primary); outline: none; list-style: none; display: flex; align-items: center; justify-content: space-between;">🥘 ${d.name}</summary>
+                    <p style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text); line-height: 1.5; padding: 0.5rem; background: rgba(0,0,0,0.05); border-radius: var(--radius-md);">
+                        📖 <strong>Recept:</strong> ${d.recipe}
+                    </p>
+                </details>
+            `).join('');
+        }
+    } else {
+        dishesContainer.textContent = "Lokální speciality";
+    }
+
+    const partyContainer = document.getElementById('food-party-container');
+    if (gastro.crops) {
+        document.getElementById('food-party').textContent = `Zkuste zakomponovat: ${gastro.crops}`;
+        partyContainer.style.display = 'block';
+    } else {
+        partyContainer.style.display = 'none';
+        document.getElementById('food-party').textContent = "";
+    }
+    
+    if (isNoAlcohol) {
+        document.getElementById('drinks-title').textContent = "🥤 Nealkoholické drinky (Mocktails)";
+        document.getElementById('drinks-base').textContent = "Čerstvé džusy, sodovky, lokální bylinky, nealko pivo";
+    } else {
+        document.getElementById('drinks-title').textContent = "🍹 Alkohol & Nealko";
+        document.getElementById('drinks-base').textContent = gastro.alcohol || "Pivo, Víno, Lokální destiláty";
+    }
+    
+    // Drinks list
+    let drinksHtml = "";
+    if (gastro.drinks && gastro.drinks.length > 0) {
+        // Filter based on alcohol toggle
+        let drinksToShow = gastro.drinks;
+
+        if (isNoAlcohol) {
+            // In No-Alcohol mode: 
+            // 1. Prioritize naturally non-alcoholic drinks
+            // 2. Convert alcoholic ones to "Virgin" versions
+            drinksToShow = gastro.drinks.map(d => {
+                if(d.type === 'nealko') return d;
+                return {
+                    name: "Virgin " + d.name, 
+                    desc: d.desc + " (použijte nealko alternativu místo alkoholu)",
+                    type: 'nealko-verze'
+                };
+            });
+        }
+
+        drinksHtml = drinksToShow.map(r => {
+            const icon = r.type === 'nealko' ? '🥤' : '🍹';
+            const color = r.type === 'nealko' ? '#10b981' : '#f43f5e';
+            return `
+            <li style="list-style: none;">
+                <details class="recipe-item" style="border-left: 4px solid ${color}; margin-bottom: 0.5rem; background: rgba(255,255,255,0.3); padding: 0.5rem; border-radius: var(--radius-md);">
+                    <summary class="summary-btn" style="font-weight: 700; cursor: pointer; color: var(--primary); outline: none; list-style: none; display: flex; align-items: center; justify-content: space-between;">
+                        <span style="display: flex; align-items: center; gap: 0.5rem;">${icon} ${r.name}</span>
+                    </summary>
+                    <div style="margin-top: 0.5rem; font-size: 0.95rem; color: var(--text); line-height: 1.5; padding: 0.5rem; background: rgba(0,0,0,0.05); border-radius: var(--radius-md);">
+                        <small><strong>Ingredience & Postup:</strong><br>${r.desc}</small>
+                    </div>
+                </details>
+            </li>
+        `}).join('');
+    } else {
+        drinksHtml = `<li class="recipe-item"><small>Žádné specifické recepty.</small></li>`;
+    }
+    document.getElementById('drink-recipes').innerHTML = drinksHtml;
+
+    // Clothing Logic
+    const clothingData = (country.culture && country.culture.clothing) ? country.culture.clothing : "Barvy vlajky, smart casual";
+    
+    // Check if we have specific data
+    const hasSpecificClothing = clothingData && !clothingData.includes("Smart casual") && !clothingData.includes("Barvy vlajky");
+    
+    // Main text (formerly generic tip) should now describe the item/style
+    if (hasSpecificClothing) {
+        document.getElementById('outfit-tips').innerHTML = `
+            Historicky nebo tradičně se zde nosí: <strong>${clothingData}</strong>.
+            <br><span style="font-size: 0.9em; opacity: 0.8; margin-top: 0.5rem; display: block;">Zkuste se tímto stylem inspirovat (barvou či doplňkem).</span>
+        `;
+        // Hide the secondary line as it's redundant now
+        document.getElementById('clothing-specific').style.display = 'none';
+    } else {
+        // Fallback for generic data
+        const decorExample = decorList[0] ? decorList[0].toLowerCase() : "barvy vlajky";
+        document.getElementById('outfit-tips').textContent = `Inspirujte se barvami této země (${decorExample}) nebo národní estetikou.`;
+        document.getElementById('clothing-specific').style.display = 'block';
+        document.getElementById('clothing-item').textContent = clothingData;
+    }
+
+    // Decor Logic
+    const decorSection = document.getElementById('decor-section');
+    if (decorList && decorList.length > 0) {
+        decorSection.style.display = 'block';
+        document.getElementById('decor-tags').innerHTML = decorList.map(t => `<span class="tag">${t}</span>`).join('');
+    } else {
+        decorSection.style.display = 'none';
+    }
+
+    // Palette Logic
+    const paletteSection = document.getElementById('palette-section');
+    const paletteContainer = document.getElementById('palette-container');
+    
+    if (paletteSection && paletteContainer) {
+        if (country.culture && country.culture.palette) {
+            paletteSection.style.display = 'block';
+            paletteContainer.innerHTML = country.culture.palette.map(color => 
+                `<div style="display:flex; flex-direction:column; align-items:center; gap:0.5rem;">
+                    <div style="width:48px; height:48px; background:${color}; border-radius:12px; border:1px solid rgba(0,0,0,0.1); box-shadow:0 2px 8px rgba(0,0,0,0.1); cursor:pointer; transition:transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);" 
+                        onmouseover="this.style.transform='scale(1.15) rotate(3deg)'" 
+                        onmouseout="this.style.transform='scale(1) rotate(0deg)'" 
+                        onclick="navigator.clipboard.writeText('${color}').then(()=>alert('Kód ${color} zkopírován!'))"
+                        title="Klikni pro zkopírování kódu">
+                    </div>
+                </div>`
+            ).join('');
+        } else {
+            paletteSection.style.display = 'none';
+        }
+    }
+
+    // Music Instrument - hide if generic or null
+    const instrument = (country.culture && country.culture.instrument) ? country.culture.instrument : null;
+    const instrumentEl = document.getElementById('music-instrument').parentElement;
+    
+    if (instrument) {
+        instrumentEl.style.display = 'block';
+        document.getElementById('music-instrument').textContent = instrument;
+    } else {
+        instrumentEl.style.display = 'none';
+    }
+
+    // Artists Logic
+    // If we have specific artists array, use it. Otherwise use generic music description as a fallback tag.
+    let artists = [];
+    if (country.culture && country.culture.artists && Array.isArray(country.culture.artists)) {
+        artists = country.culture.artists;
+    } else {
+        artists = [musicVibe || "Tradiční hudba"];
+    }
+    
+    document.getElementById('music-tags').innerHTML = artists.map(t => `<span class="tag" style="background: rgba(var(--primary-rgb), 0.1); color: var(--primary); border: 1px solid rgba(var(--primary-rgb), 0.2);">${t}</span>`).join('');
+}
+
+/**
+ * UTILS: SHOPPING LIST & SHARE
+ */
+document.getElementById('copy-shopping').addEventListener('click', () => {
+    const country = document.getElementById('country-name').textContent;
+    const food = document.getElementById('food-typical').textContent;
+    const drinks = document.getElementById('drinks-base').textContent;
+    const snack = document.getElementById('food-party').textContent;
+    
+    const text = `Nákupní seznam pro ${country} Party:
+- Suroviny na: ${food}
+- Party snack: ${snack}
+- Základ nápojů: ${drinks}
+- Led, čerstvé bylinky (máta, koriandr), citrony/limetky.`;
+
+    navigator.clipboard.writeText(text).then(() => alert("Seznam zkopírován do schránky!"));
+});
+
+document.getElementById('share-slack').addEventListener('click', () => {
+    const country = document.getElementById('country-name').textContent;
+    const flag = document.getElementById('country-flag').textContent;
+    const snack = document.getElementById('food-party').textContent;
+    const vibe = document.getElementById('music-vibe').textContent;
+
+    const text = `🚀 *Office Party Update!* 🌍
+Příští party bude v duchu: *${country}* ${flag}
+✨ *Tip na jídlo:* ${snack}
+🎶 *Hudba:* ${vibe}
+Doražte v barvách této země!`;
+
+    navigator.clipboard.writeText(text).then(() => alert("Text pro Slack zkopírován!"));
+});
+
+// Wait for DOM
+document.addEventListener('DOMContentLoaded', () => {
+    init();
+});
+
+</script>
+</body>
+</html>
